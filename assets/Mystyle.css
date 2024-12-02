@@ -1,0 +1,775 @@
+:root {
+  /* Define color palette as named variables */
+  --green-dark:#787240;
+  --green-light:#bbb875;
+  --pale:#FAF9EC;
+  --afterglow:#F3EBC9;
+  --heading:#4A4422;
+  --green-grid: #ccc486;
+  --tan-brown: #d5c09b;
+  --muted-green: #b7b281;
+  font-family: 'futura-pt';
+  font-size: 1vw;
+}
+
+.topnav {
+  /* Add a background color to the top navigation */
+  background-color: var(--afterglow);
+  /* Force global navigation bar to stick at top of page */
+  position: fixed;
+  /* Remove margins from top and left side, stretch across width of entire page, increase height of text bubbles */
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 300%;
+  /* Force topnav to render above every element in the page */
+  z-index: 10;
+  display:grid;
+  grid-template-columns: 10% auto auto auto auto auto auto auto 10%;
+}
+
+.topnav p {
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--heading);
+}
+.topnav a { /* Style the links inside the navigation bar */
+  display:inline-block;
+  color: #000000;
+  position: relative;
+  background-color: var(--green-light);
+  /* Make text borders rounded, create extra space between each bubble and edges of header. Padding to make bubble extend to left and right of text */
+  border-radius: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px 20px;
+  /* Font formatting */
+  text-decoration: none; /* No underline */
+  font-size: 20px;
+  text-align: center;
+}
+
+.topnav a:hover { /* Text background changes color when mouse hovers over text */
+  background-color: var(--pale);
+}
+
+.navImage {
+  display: table-cell;
+  grid-column: 2;
+}
+
+.container {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+body {
+  /* Set background color, remove margins */
+  background-color: var(--afterglow);
+  margin: 0 auto;
+}
+
+h1 {
+  margin-left: 10%;
+  color: var(--heading);
+  font-size: 70px;
+  padding-top: 6.2%; /* Adds a little empty space to the top, necessary for when using navigation bar. Without it, heading will be under navbar */
+}
+
+h2 {
+  margin-left: 10%;
+  font-weight: normal; /* h2 font-weight defaults to bold, want it to be normal */
+  color: var(--heading);
+  font-size: 55px;
+}
+
+h3 {
+  margin-left: 10%;
+  color:var(--heading);
+  font-size: 55px;
+  margin-top: 0%;
+  margin-bottom: 4%;
+}
+
+p { /* Default paragraph values, 20px font, newline in <p></p> means newline on website */
+  white-space: pre-line;
+  font-size: 23px;
+}
+
+.landingpage {
+  margin-top: 70px;
+}
+
+/* Adjust the size of snail image to fill width of page */
+.snail {
+  width: 100%;
+  z-index: 0;
+}
+
+.logo {
+  white-space: pre-line;
+  color: var(--afterglow);
+  font-size: 100px;
+  font-weight: bold;
+  line-height: 90px; /* Adjusts space between lines in logo */
+  margin-left: 10%;
+  bottom: 250px; /* Moves text upward on page so it is on top of image */
+  position: absolute;
+  z-index: 1; /* Adds 1 to render priority so text is on top of image */
+  
+}
+
+.overlay {
+  background-color: var(--afterglow);
+  width: 100%; /* Make background cover entire width of page */
+  margin-top: -5%; /* Move upward so that it covers lower part of image */
+  border-radius: 5vw;
+  position: absolute;
+  z-index: 1; 
+}
+
+.bio {
+  margin: 9% 10% 0% 10%;
+  display:grid; /* Use a 3 column by 2 row grid to display about information */
+  grid-template-columns: auto 33% 31.5%;
+  grid-template-rows: auto auto;
+  position:relative;
+  z-index: 2;
+}
+
+.myself {
+  max-width: 100%; 
+  max-height: 100%;
+}
+
+.myself img {
+  border: 14px solid #b6b283; /* Image has a border with curved corners */
+  border-radius: 26px;
+  z-index: 3;
+}
+
+.about {
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 3%;
+  /* Sets background color and rounded corners */
+  background-color: var(--green-light);
+  border-radius: 30px;
+}
+
+.aboutheading {
+  font-size: 35px;
+  color: var(--heading);
+}
+
+.about p { 
+  margin-top: 2%;
+  font-weight:normal;
+  line-height: 120%;
+}
+
+.education {
+  grid-area: 2 / 2 / 2 / 2; 
+  background-color: var(--muted-green);
+  margin-top: 7%; /* Margin between education and about */
+  margin-left: 7%; /* Margin between education and image */
+  margin-right: 3.5%; /* Skills box has left margin of 3.5%, so total margin is 7% */
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2.5%;
+  border-radius: 30px;
+}
+
+.subheading { /* Heading format for Education and Skills, same size and color so reuse the style */
+  padding-top: 5%;
+  font-size: 35px;
+  line-height: 90%;
+  color: var(--heading);
+  font-weight: normal; /* Switch to normal text from the default (bold) */
+  text-align: center; 
+}
+
+.education p {
+  padding-bottom: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+  line-height: 110%; /* Increase height of lines slightly */
+  color: var(--heading);
+}
+
+.skills {
+  grid-area: 2 / 3 / 2 / 3;
+  background-color: var(--tan-brown);
+  margin-top: 7%; /* Margin between skills and about */
+  margin-left: 3.5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2.5%;
+  border-radius: 30px;
+}
+
+.skills p {
+  padding-bottom: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+  line-height: 110%;
+  color: var(--heading);
+}
+
+.experience {
+  background-color: var(--green-grid);
+  border-radius: 100px;
+  margin: 2% 10%; 
+  display: grid; /* Grid of two columns, set size of job title, automatic size of job description */
+  grid-template-columns: 40% auto; 
+}
+.jobh {
+  padding-top: 0%; /* Slight top and left padding to keep it within the background */
+  padding-left: 10%;
+  display: table-cell
+}
+
+.jobh p { /* Increase size of job title font */
+  font-size: 30px;
+}
+
+.jobd { /* Job description formatting */
+  padding-top: 2%; /* Slight top and right padding to keep it within the background */
+  padding-right: 5%; 
+  display: table-cell
+}
+
+.download {
+  /* Adjust background color and edge size */
+  background-color: var(--heading);
+  border-radius: 40px;
+  /* Adjust text format and position  */
+  color: var(--afterglow);
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-align: center; 
+  /* Adjust position of download button */
+  margin-left: 40%;
+  width: 15%;
+  margin-top: 2%;
+}
+
+.demoreel {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.demoreel video {
+  width: 100%;
+  border: 10px solid var(--tan-brown);
+  border-radius: 26px;
+}
+
+.featuredcontainer {
+  background-color: var(--muted-green);
+  margin-left: 10%; 
+  margin-right: 10%;
+  padding-top: 5%;
+  display: grid;
+  border-radius: 30px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+}
+
+.fheading1 {
+  grid-area: 1 / 1 / 1 / 3;
+  color: var(--heading);
+  font-size: 100px;
+  text-align: center;
+}
+
+.fheading2 {
+  grid-area: 2 / 1 / 2 / 3;
+  color: var(--green-dark);
+  font-size: 60px;
+  text-align: center;
+}
+
+.textitem1 {
+  padding: 10px 10px;
+  margin-top: 10%;
+  margin-left: 20%;
+  vertical-align: middle;
+  display: table-cell;
+  grid-row: 3 / 5;
+}
+
+.textitem1 p {
+  font-size: 20px;
+}
+
+.image1 {
+  padding: 10px 0px;
+  margin-top: 10%;
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+  object-fit: cover;
+  grid-area: 3 / 2 / 4 / 2;
+}
+
+.image1 img {
+  border: 5px solid var(--green-dark);
+  border-radius: 26px;
+}
+
+.image2 {
+  padding: 10px 0px;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+  grid-area: 4 / 2 / 5 / 2;
+}
+
+.image2 img {
+  border: 5px solid var(--green-dark);
+  border-radius: 26px;
+} 
+
+.image2 p {
+  font-size: 20px;
+}
+
+.image3 {
+  padding: 10px 10px;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+  grid-area: 6 / 1 / 7 / 3;
+}
+
+.image3 img {
+  border-radius: 26px;
+}
+
+.image3 p {
+  font-size: 20px;
+}
+
+.video1 {
+  max-width: 534px;
+  padding: 10px 10px;
+  margin-left: 20%;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+  grid-area: 7 / 1 / 8 / 1;
+}
+
+.video1 video {
+  width: 100%;
+  border: 6px solid var(--green-dark);
+  border-radius: 15px;
+}
+
+.video1 p {
+  font-size: 20px;
+}
+
+.video2 {
+  max-width: 534px;
+  padding: 10px 10px;
+  margin-left: 9%;
+  margin-right: 10%;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+  grid-area: 7 / 2 / 8 / 2;
+}
+
+.video2 video {
+  width: 100%;
+  border: 6px solid var(--green-dark);
+  border-radius: 15px;
+}
+
+.video2 p {
+  font-size: 20px;
+}
+
+.fheading3 {
+  grid-area: 8 / 1 / 9 / 3;
+  color: var(--afterglow);
+  font-size: 50px;
+  text-align: center;
+}
+
+.video3 {
+  max-width: 1920px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 7.5%;
+  padding-top: 1%;
+  vertical-align: middle;
+  text-align: center;
+  display: table-cell;
+  grid-area: 9 / 1 / 9 / 3;
+}
+
+.video3 video {
+  width: 100%;
+  border: 10px solid var(--heading);
+}
+
+.slideshow-container {
+  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.threeDslide {
+  display: none;
+  border: 10px solid #a7a480;
+  border-radius: 26px;
+}
+
+.threeDslide img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+h4 {
+  color: var(--afterglow);
+  white-space: pre-line;
+  font-weight: normal;
+  font-size: 2.2em; 
+  width: 100%;
+  line-height: 1em;
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+
+h6 {
+  color: var(--afterglow);
+  white-space: pre-line;
+  font-weight: normal;
+  font-size: 1.8em; 
+  width: 100%;
+  line-height: 1em;
+  margin-top: 0%;
+  margin-bottom: 10%;
+  padding: 0%;
+}
+
+/* First slide of 3D Design and Animation Slideshow */
+.threeDSlide1Text {
+  text-align: center;
+  position: absolute;
+  margin-left: 5%;
+  margin-right: 50%;
+}
+
+.threeDSLide1Text p {
+  font-size: 1.2em;
+  color: var(--heading);
+  margin-top: -5%;
+}
+
+.InitialLabel, .FinalLabel, .ThroneLabel {
+  font-size: 1.2em;
+  text-align: center;
+  position: absolute;
+  color: var(--afterglow);
+  text-decoration: underline;
+}
+
+.InitialLabel {
+  right: 65vw; 
+  top: 53%; 
+
+}
+
+.FinalLabel {
+  right: 48vw;  
+  top: 53%;
+}
+
+.SnailAngle, .SnailFront {
+  position: absolute;
+  max-width: 33vw;
+  border: 3px solid var(--afterglow);
+  border-radius: 36px;
+  right: 5%;
+}
+
+.SnailAngle {
+  top: 5%; 
+}
+
+.SnailFront {
+  bottom: 5%;
+}
+
+.SnailAngle img, .SnailFront img, .LightingBed img, .LightingGuitar img, .LightingWindow img {
+  border-radius: 36px;
+}
+
+.SnailRender{
+  position: absolute;
+  max-width: 27vw;
+  bottom: 5%;
+  left: 21%;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.SnailRender img {
+  -webkit-filter: drop-shadow(2px 2px 10px #222);
+  filter: drop-shadow(2px 2px 10px #222);
+}
+
+.SnailSketch {
+  position: absolute;
+  max-width: 23vw;
+  bottom: 0%;
+  transform: rotate(10deg)
+}
+
+/* Second slide of 3D Design and Animation Slideshow */
+.threeDSlide2Text {
+  text-align: center;
+  position: absolute;
+  margin-left: 63%;
+  margin-right: 5%;
+}
+
+.threeDSLide2Text p {
+  font-size: 1.1em;
+  color: var(--heading);
+}
+
+.threeDSlide2Text h4 {
+  font-size: 2.0em;
+}
+
+.threeDSlide3Text {
+  text-align: center;
+  position: absolute;
+  margin-left: 5%;
+  margin-right: 55%; 
+}
+
+.LightingBed, .LightingGuitar, .LightingWindow {
+  position: absolute;
+  border: 3px solid var(--afterglow);
+  border-radius: 36px;
+}
+
+.LightingBed {
+  max-width: 45vw;
+  left: 4%;
+  top: 7%;
+}
+
+.LightingGuitar {
+  max-width: 29vw;
+  bottom: 6%;
+  left: 17%;
+}
+
+.LightingWindow {
+  max-width: 29vw;
+  bottom: 5%;
+  right: 5%;
+}
+
+/* Third slide of 3D Design and Animation Slideshow */
+.threeDSLide3Text p {
+  font-size: 1.2em;
+  color: var(--heading);
+}
+
+.ThroneLabel {
+  right: 56vw;  
+  top: 47%;
+}
+
+.Slide4Container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  position: absolute;
+  text-align: center;
+  margin-left: 10%; 
+  margin-right: 10%; 
+  color: var(--afterglow);
+}
+
+.threeDSlide4Text {
+  display: table-cell;
+  grid-area: 1 / 1 / 1 / 3;
+}
+
+.threeDSlide4Text h6 {
+  margin-bottom: 5%;
+}
+
+.threeDSlide4Video1, .threeDSlide4Video2 {
+  display: table-cell; 
+  max-width: 30vw; 
+  margin-right: 5%;
+}
+
+.threeDSlide4Video1 {
+  grid-area: 2 / 1 / 2 / 2;
+}
+
+.threeDSlide4Video2 {
+  grid-area: 2 / 2 / 2 / 3;
+}
+
+h5 {
+  font-size: 1.4em;
+  font-weight: normal;
+  line-height: 1em;
+  margin: 0px 0px 10px 0px;
+}
+
+.Slide4Container p {
+  font-size: 1.2em;
+  color: var(--heading);
+  line-height: 1em;
+}
+
+.Slide4Container video {
+  width: 100%;
+  border: 2px solid var(--afterglow);
+}
+
+.twoDslide {
+  display: none;
+  border: 10px solid var(--tan-brown);
+  border-radius: 26px;
+}
+
+.twoDslide img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+h7 {
+  color: white;
+  white-space: pre-line;
+  font-weight: bold;
+  font-size: 2.2em; 
+  width: 100%;
+  line-height: 1em;
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+
+h8 {
+  color: white;
+  white-space: pre-line;
+  font-style: italic;
+  font-size: 1.8em; 
+  width: 100%;
+  line-height: 1em;
+  margin-top: 0%;
+  margin-bottom: 10%;
+  padding: 0%;
+}
+
+
+.twoDSlide1Text1 {
+  text-align: center;
+  position: absolute;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 55%;
+}
+
+.twoDSlide1Text1 p, .twoDSlide3Text1 p {
+  font-size: 1.1em;
+  color: var(--heading);
+}
+/* Condense 2DSlide1 label formatting into one block of code to reduce code use */
+.LogoDesignLabel, .ColorPaletteLabel, .hexcode1, .hexcode2, .hexcode3, .MockupLabel, .PosterLabel {
+  font-size: 1.2em;
+  text-align: center;
+  position: absolute;
+  color: var(--heading);
+}
+
+.LogoDesignLabel {
+  right: 19.5vw; 
+  top: 5%;
+  text-decoration: underline;
+}
+
+.ColorPaletteLabel {
+  right: 17vw; 
+  top: 37%; 
+  text-decoration: underline;
+}
+
+.hexcode1 {
+  right: 34.7vw;
+  top: 54%;  
+}
+
+.hexcode2 { 
+  right: 28.5vw;  
+  top: 54%; 
+}
+
+.hexcode3 {
+  right: 22.3vw; 
+  top: 54%; 
+}
+
+.MockupLabel {
+  right: 34.1vw; 
+  top: 62%; 
+  text-decoration: underline;
+}
+
+.twoDSlide3Text1 {
+  text-align: center;
+  position: absolute;
+  white-space: pre-line;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 60%;
+}
+
+.PosterLabel {
+  right: 40vw; 
+  top: 80%; 
+  text-decoration: underline;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  font-size: 18px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
