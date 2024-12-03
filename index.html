@@ -1,20 +1,38 @@
 <html>
   <header>
     <link rel="stylesheet" href="https://use.typekit.net/mmy8mrb.css"> <!-- Futura PT Font Import-->
-    <link rel="stylesheet" href="./assets/bootstrap-grid.css"> <!-- Import bootstrap systems  -->
+    <link rel="stylesheet" href="./assets/bootstrap.css"> <!-- Import bootstrap systems  -->
     <link rel="stylesheet" href="./assets/Mystyle.css"/> <!-- Custom CSS File-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </header>
   <body>
     <div class="topnav">
-      <img src="assets/Logo-removebg-preview.png" width="120" height="119" class="navImage">
-      <p><b>SHANE RUNG 
-        DESIGN</b></p>
-      <a href="#about">Meet Shane</a>
-      <a href='#experience'>Experience</a>
-      <a href="#featured">Featured Work</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact" class="lastNavItem">Contact</a>
+      <div class="container-fluid mx-auto">
+        <div class="row">
+          <div class="col-1 offset-1">
+            <img src="assets/Logo-removebg-preview.png" alt="Line Art Outline of Shane Rungkagoonnuwat" class="navImage">
+          </div>
+          <div class="col-2 offset-xs-1 offset-sm-1 offset-lg-0">
+            <p><b>SHANE RUNG 
+              DESIGN</b></p>
+          </div>
+          <div class="col-1 offset-lg-2">
+            <a href="#about">Meet Shane</a>
+          </div>
+          <div class="col-1 d-flex flex-column justify-content-between">
+            <a href='#experience'>Experience</a>
+          </div>
+          <div class="col-1 d-flex flex-column justify-content-between">
+            <a href="#featured">Featured Work</a>
+          </div>
+          <div class="col-1 d-flex flex-column justify-content-between">
+            <a href="#portfolio">Portfolio</a>
+          </div>
+          <div class="col-1 d-flex flex-column justify-content-between">
+            <a href="#contact" class="lastNavItem">Contact</a>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="landingpage">
       <img src="assets/FootSnail.jpg" alt="Foot Snail" class="snail"  id="top">
@@ -435,27 +453,43 @@
     <h1 id="contact">CONTACT</h1>
     <div class="contactContainer">
       <div class="cheading"><b>LET'S KEEP IN TOUCH</b></div>
-      <div class="email">EMAIL<h9><button onclick="copyEmail()"><b>Copy</b></button>shane.rung@gmail.com</h9>
+      <div class="email">
+        <div class="container-fluid">
+          <div class="row ">
+            <div class="col-1">
+              EMAIL
+            </div>
+            <div class="col-1 offset-1">
+              <img src="./assets/Contact/email.png">
+            </div>
+            <div class="col-1 offset-4">
+              <button onclick="copyEmail()"><b>Copy</b></button>
+            </div>
+            <div class="col-4">
+              <h9>shane.rung@gmail.com</h9>
+            </div>
+          </div>
+        </div>
       </div>
-      <a href="https://www.linkedin.com/in/shane-rung/"><div class="linkedin">
+      <a href="https://www.linkedin.com/"><div class="linkedin">
         <div class="container">
           <div class="row">
             <div class="col-2">
               LINKEDIN
             </div>
-            <div class="col-1" margin-left="1%">
+            <div class="col-1">
               <img src="./assets/Contact/linkedin.png">
             </div>
           </div>
         </div>
       </div></a>
-      <a href="https://www.instagram.com/shane.rung/"><div class="instagram">
+      <a href="https://www.instagram.com"><div class="instagram">
         <div class="container">
           <div class="row">
             <div class="col-2">
               INSTAGRAM
             </div>
-            <div class="col-1" margin-left="1%">
+            <div class="col-1">
               <img src="./assets/Contact/instagram.png">
             </div>
           </div>

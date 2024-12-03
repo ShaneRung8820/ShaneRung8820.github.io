@@ -21,17 +21,14 @@
   /* Remove margins from top and left side, stretch across width of entire page, increase height of text bubbles */
   top: 0;
   left: 0;
+  right:0;
   width: 100%;
-  line-height: 300%;
   /* Force topnav to render above every element in the page */
   z-index: 10;
-  display:grid;
-  grid-template-columns: 10% auto auto auto auto auto auto auto 10%;
 }
 
 .topnav p {
-  font-size: 30px;
-  line-height: 30px;
+  font-size: clamp(8px, 4vw, 24px);
   color: var(--heading);
 }
 .topnav a { /* Style the links inside the navigation bar */
@@ -41,14 +38,11 @@
   background-color: var(--green-light);
   /* Make text borders rounded, create extra space between each bubble and edges of header. Padding to make bubble extend to left and right of text */
   border-radius: 30px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 10px 20px;
+  margin-top: 25%;  
+  padding: 8px 8px;
   /* Font formatting */
   text-decoration: none; /* No underline */
-  font-size: 20px;
+  font-size: clamp(12px, 4vw, 16px);
   text-align: center;
 }
 
@@ -57,8 +51,7 @@
 }
 
 .navImage {
-  display: table-cell;
-  grid-column: 2;
+  width: 100px; 
 }
 
 body {
@@ -70,7 +63,7 @@ body {
 h1 {
   margin-left: 10%;
   color: var(--heading);
-  font-size: 5em;
+  font-size: clamp(36px, 8vw, 70px);
   padding-top: 6.2%; /* Adds a little empty space to the top, necessary for when using navigation bar. Without it, heading will be under navbar */
 }
 
@@ -79,16 +72,16 @@ h2 {
   margin-bottom: 1%;
   font-weight: normal; /* h2 font-weight defaults to bold, want it to be normal */
   color: var(--heading);
-  font-size: 4em;
+  font-size: clamp(30px, 6vw, 55px);
 }
 
 h3 {
   margin-left: 10%;
   font-weight: normal;
   color:var(--heading);
-  font-size: 4em;
-  margin-top: 4%;
-  margin-bottom: 0%;
+  font-size: clamp(30px, 6vw, 55px);
+  margin-top: 3%;
+  margin-bottom: 1%;
 }
 
 a {
@@ -162,7 +155,7 @@ p { /* Default paragraph values, 16-24px font, newline in <p></p> means newline 
 }
 
 .aboutheading {
-  font-size: 1.6em;
+  font-size: clamp(24px, 4vw, 36px);
   color: var(--heading);
 }
 
@@ -174,7 +167,7 @@ p { /* Default paragraph values, 16-24px font, newline in <p></p> means newline 
 
 .subheading { /* Heading format for Education and Skills, same size and color so reuse the style */
   padding-top: 5%;
-  font-size: 35px;
+  font-size: clamp(20px, 4vw, 36px);
   line-height: 90%;
   color: var(--heading);
   font-weight: normal; /* Switch to normal text from the default (bold) */
@@ -235,19 +228,19 @@ p { /* Default paragraph values, 16-24px font, newline in <p></p> means newline 
 
 .experience {
   background-color: var(--green-grid);
-  border-radius: 100px;
+  border-radius: 10vw; 
   margin: 2% 10%; 
   display: grid; /* Grid of two columns, set size of job title, automatic size of job description */
   grid-template-columns: 40% auto; 
 }
 .jobh {
-  padding-top: 0%; /* Slight top and left padding to keep it within the background */
-  padding-left: 10%;
+  padding-top: 5%; /* Slight top and left padding to keep it within the background */
+  padding-left: 15%;
   display: table-cell
 }
 
 .jobh p { /* Increase size of job title font */
-  font-size: clamp(20px, 5vw, 28px);
+  font-size: clamp(16px, 4vw, 28px);
 }
 
 .jobd { /* Job description formatting */
@@ -263,20 +256,25 @@ p { /* Default paragraph values, 16-24px font, newline in <p></p> means newline 
   border-radius: 40px;
   /* Adjust text format and position  */
   color: var(--heading);
-  font-size: 1.5em;  
+  font-size: clamp(16px, 4vw, 24px);  
   font-weight: bold;
   padding: 1% 1%;
   text-align: center; 
-  /* Adjust position of download button */
+  vertical-align: center;
   margin-left: 40%;
-  width: 15%;
-  margin-top: 2%;
+  margin-right: 40%;
+  /* Adjust position of download button */
+}
+
+.download:hover {
+  background-color: var(--pale);
 }
 
 .featuredcontainer {
   background-color: var(--muted-green);
   margin-left: 10%; 
   margin-right: 10%;
+  margin-top: 3%;
   padding-top: 5%;
   padding-bottom: 5%;
   border-radius: 30px;
@@ -289,7 +287,7 @@ p { /* Default paragraph values, 16-24px font, newline in <p></p> means newline 
 
 .fheading1 {
   color: var(--heading);
-  font-size: 5em; 
+  font-size: clamp(36px, 8vw, 60px);  
   text-align: center;
   margin-left: 5%;
   margin-right: 5%; 
@@ -298,7 +296,7 @@ p { /* Default paragraph values, 16-24px font, newline in <p></p> means newline 
 
 .fheading2 {
   color: var(--green-dark);
-  font-size: 3.2em; 
+  font-size: clamp(20px, 5vw, 50px); 
   text-align: center;
 }
 
@@ -913,6 +911,7 @@ h8 {
   cursor: pointer;
   transition: 0.3s;
   transform: translateY(-50%);
+  z-index: 9;
 }
 
 .prev {
