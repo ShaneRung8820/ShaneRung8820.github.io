@@ -42,3 +42,14 @@ function show2DSlide(n) {
 show3DSlide(current3DSlide);
 // Initialize the second slideshow
 show2DSlide(current2DSlide);
+
+function copyEmail() {
+  var copyText = document.createElement("copytext");
+  copyText.style="display:none";
+  copyText.value = "shane.rung@gmail.com";
+  document.body.appendChild(copyText);
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  navigator.clipboard.writeText(copyText.value);
+  alert("Copied the text: " + copyText.value);
+}

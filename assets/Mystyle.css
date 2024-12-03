@@ -8,6 +8,7 @@
   --green-grid: #ccc486;
   --tan-brown: #d5c09b;
   --muted-green: #b7b281;
+  --pastel-brown: #b49479;
   font-family: 'futura-pt';
   font-size: 1vw;
 }
@@ -60,11 +61,6 @@
   grid-column: 2;
 }
 
-.container {
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
 body {
   /* Set background color, remove margins */
   background-color: var(--afterglow);
@@ -74,28 +70,34 @@ body {
 h1 {
   margin-left: 10%;
   color: var(--heading);
-  font-size: 70px;
+  font-size: 5em;
   padding-top: 6.2%; /* Adds a little empty space to the top, necessary for when using navigation bar. Without it, heading will be under navbar */
 }
 
 h2 {
   margin-left: 10%;
+  margin-bottom: 1%;
   font-weight: normal; /* h2 font-weight defaults to bold, want it to be normal */
   color: var(--heading);
-  font-size: 55px;
+  font-size: 4em;
 }
 
 h3 {
   margin-left: 10%;
+  font-weight: normal;
   color:var(--heading);
-  font-size: 55px;
-  margin-top: 0%;
-  margin-bottom: 4%;
+  font-size: 4em;
+  margin-top: 4%;
+  margin-bottom: 0%;
 }
 
-p { /* Default paragraph values, 20px font, newline in <p></p> means newline on website */
+a {
+  text-decoration: none; 
+}
+
+p { /* Default paragraph values, 16-24px font, newline in <p></p> means newline on website */
   white-space: pre-line;
-  font-size: 23px;
+  font-size: clamp(16px, 4vw, 24px);
 }
 
 .landingpage {
@@ -111,9 +113,9 @@ p { /* Default paragraph values, 20px font, newline in <p></p> means newline on 
 .logo {
   white-space: pre-line;
   color: var(--afterglow);
-  font-size: 100px;
+  font-size: 6em; 
   font-weight: bold;
-  line-height: 90px; /* Adjusts space between lines in logo */
+  line-height: .8em; /* Adjusts space between lines in logo */
   margin-left: 10%;
   bottom: 250px; /* Moves text upward on page so it is on top of image */
   position: absolute;
@@ -125,33 +127,33 @@ p { /* Default paragraph values, 20px font, newline in <p></p> means newline on 
   background-color: var(--afterglow);
   width: 100%; /* Make background cover entire width of page */
   margin-top: -5%; /* Move upward so that it covers lower part of image */
+  padding: 0%;
   border-radius: 5vw;
   position: absolute;
   z-index: 1; 
 }
 
-.bio {
-  margin: 9% 10% 0% 10%;
-  display:grid; /* Use a 3 column by 2 row grid to display about information */
-  grid-template-columns: auto 33% 31.5%;
-  grid-template-rows: auto auto;
-  position:relative;
-  z-index: 2;
+.overlay h1 {
+  padding-bottom: 0%;
+  margin-bottom: 0%;
 }
 
 .myself {
   max-width: 100%; 
-  max-height: 100%;
+  height: auto;
 }
 
 .myself img {
-  border: 14px solid #b6b283; /* Image has a border with curved corners */
+  border: 14px solid #a2a181; /* Image has a border with curved corners */
   border-radius: 26px;
   z-index: 3;
+  width: 100%;
+  object-fit: cover;
 }
 
 .about {
-  padding-right: 5%;
+  padding-left: 7%; 
+  padding-right: 7%;
   padding-top: 5%;
   padding-bottom: 3%;
   /* Sets background color and rounded corners */
@@ -160,7 +162,7 @@ p { /* Default paragraph values, 20px font, newline in <p></p> means newline on 
 }
 
 .aboutheading {
-  font-size: 35px;
+  font-size: 1.6em;
   color: var(--heading);
 }
 
@@ -168,18 +170,6 @@ p { /* Default paragraph values, 20px font, newline in <p></p> means newline on 
   margin-top: 2%;
   font-weight:normal;
   line-height: 120%;
-}
-
-.education {
-  grid-area: 2 / 2 / 2 / 2; 
-  background-color: var(--muted-green);
-  margin-top: 7%; /* Margin between education and about */
-  margin-left: 7%; /* Margin between education and image */
-  margin-right: 3.5%; /* Skills box has left margin of 3.5%, so total margin is 7% */
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 2.5%;
-  border-radius: 30px;
 }
 
 .subheading { /* Heading format for Education and Skills, same size and color so reuse the style */
@@ -191,19 +181,28 @@ p { /* Default paragraph values, 20px font, newline in <p></p> means newline on 
   text-align: center; 
 }
 
+.education {
+  background-color: var(--muted-green);
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2.5%;
+  border-radius: 30px;
+}
+
 .education p {
   padding-bottom: 3%;
   padding-left: 5%;
   padding-right: 5%;
   line-height: 110%; /* Increase height of lines slightly */
+  color: #000000;
+}
+
+.education p b {
   color: var(--heading);
 }
 
 .skills {
-  grid-area: 2 / 3 / 2 / 3;
   background-color: var(--tan-brown);
-  margin-top: 7%; /* Margin between skills and about */
-  margin-left: 3.5%;
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 2.5%;
@@ -216,6 +215,22 @@ p { /* Default paragraph values, 20px font, newline in <p></p> means newline on 
   padding-right: 5%;
   line-height: 110%;
   color: var(--heading);
+}
+
+.demoreelcontainer {
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: var(--tan-brown);
+  border-radius: 1.5vw;
+}
+
+.demoreel {
+  padding: 3%; 
+}
+
+.demoreel video {
+  width: 100%;
+  border-radius: 1.5vw;
 }
 
 .experience {
@@ -232,24 +247,25 @@ p { /* Default paragraph values, 20px font, newline in <p></p> means newline on 
 }
 
 .jobh p { /* Increase size of job title font */
-  font-size: 30px;
+  font-size: clamp(20px, 5vw, 28px);
 }
 
 .jobd { /* Job description formatting */
   padding-top: 2%; /* Slight top and right padding to keep it within the background */
   padding-right: 5%; 
+  font-size: clamp(16px, 4vw, 24px);
   display: table-cell
 }
 
 .download {
   /* Adjust background color and edge size */
-  background-color: var(--heading);
+  background-color: var(--green-grid);
   border-radius: 40px;
   /* Adjust text format and position  */
-  color: var(--afterglow);
-  font-size: 30px;
+  color: var(--heading);
+  font-size: 1.5em;  
   font-weight: bold;
-  padding: 10px 20px;
+  padding: 1% 1%;
   text-align: center; 
   /* Adjust position of download button */
   margin-left: 40%;
@@ -257,155 +273,85 @@ p { /* Default paragraph values, 20px font, newline in <p></p> means newline on 
   margin-top: 2%;
 }
 
-.demoreel {
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-.demoreel video {
-  width: 100%;
-  border: 10px solid var(--tan-brown);
-  border-radius: 26px;
-}
-
 .featuredcontainer {
   background-color: var(--muted-green);
   margin-left: 10%; 
   margin-right: 10%;
   padding-top: 5%;
-  display: grid;
+  padding-bottom: 5%;
   border-radius: 30px;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: auto;
+}
+
+.featuredcontainer .container {
+  margin-left: 5%;
+  margin-right: 20%;
 }
 
 .fheading1 {
-  grid-area: 1 / 1 / 1 / 3;
   color: var(--heading);
-  font-size: 100px;
+  font-size: 5em; 
   text-align: center;
+  margin-left: 5%;
+  margin-right: 5%; 
+  letter-spacing: -.02em;
 }
 
 .fheading2 {
-  grid-area: 2 / 1 / 2 / 3;
   color: var(--green-dark);
-  font-size: 60px;
+  font-size: 3.2em; 
   text-align: center;
 }
 
 .textitem1 {
-  padding: 10px 10px;
   margin-top: 10%;
-  margin-left: 20%;
+  font-size: clamp(16px, 4vw, 20px);
+  margin-right: 10%; 
   vertical-align: middle;
-  display: table-cell;
-  grid-row: 3 / 5;
+  color: black;
 }
 
-.textitem1 p {
-  font-size: 20px;
+/* Add a border to all featured work images and videos */
+.image1 img, .image2 img, .image3 img, .image4 img, .image5 img, .video1 video, .video2 video {
+  border: 5px solid var(--green-dark);
+  border-radius: 1.5vw;
+  width: 100%;
 }
 
 .image1 {
-  padding: 10px 0px;
+  max-width: 30vw;
   margin-top: 10%;
+  margin-right: 10%;
   vertical-align: middle;
-  display: table-cell;
   text-align: center;
   object-fit: cover;
-  grid-area: 3 / 2 / 4 / 2;
-}
-
-.image1 img {
-  border: 5px solid var(--green-dark);
-  border-radius: 26px;
 }
 
 .image2 {
-  padding: 10px 0px;
+  max-width: 30vw;
   vertical-align: middle;
   text-align: center;
-  display: table-cell;
-  grid-area: 4 / 2 / 5 / 2;
 }
 
-.image2 img {
-  border: 5px solid var(--green-dark);
-  border-radius: 26px;
-} 
-
-.image2 p {
-  font-size: 20px;
+.image3, .image4, .image5 {
+  vertical-align: middle;
+  max-width: 20vw;
 }
 
-.image3 {
-  padding: 10px 10px;
+.video1, .video2 {
+  max-width: 30vw;
   vertical-align: middle;
   text-align: center;
-  display: table-cell;
-  grid-area: 6 / 1 / 7 / 3;
-}
-
-.image3 img {
-  border-radius: 26px;
-}
-
-.image3 p {
-  font-size: 20px;
-}
-
-.video1 {
-  max-width: 534px;
-  padding: 10px 10px;
-  margin-left: 20%;
-  vertical-align: middle;
-  text-align: center;
-  display: table-cell;
-  grid-area: 7 / 1 / 8 / 1;
-}
-
-.video1 video {
-  width: 100%;
-  border: 6px solid var(--green-dark);
-  border-radius: 15px;
-}
-
-.video1 p {
-  font-size: 20px;
-}
-
-.video2 {
-  max-width: 534px;
-  padding: 10px 10px;
-  margin-left: 9%;
-  margin-right: 10%;
-  vertical-align: middle;
-  text-align: center;
-  display: table-cell;
-  grid-area: 7 / 2 / 8 / 2;
-}
-
-.video2 video {
-  width: 100%;
-  border: 6px solid var(--green-dark);
-  border-radius: 15px;
-}
-
-.video2 p {
-  font-size: 20px;
 }
 
 .fheading3 {
-  grid-area: 8 / 1 / 9 / 3;
   color: var(--afterglow);
-  font-size: 50px;
+  font-size: clamp(30px, 6vw, 50px);
   text-align: center;
+  margin-right: 15%;
 }
 
 .video3 {
-  max-width: 1920px;
-  margin-left: 10%;
-  margin-right: 10%;
+  max-width: 70vw;
   margin-bottom: 7.5%;
   padding-top: 1%;
   vertical-align: middle;
@@ -415,10 +361,19 @@ p { /* Default paragraph values, 20px font, newline in <p></p> means newline on 
 }
 
 .video3 video {
-  width: 100%;
+  width: 90%;
   border: 10px solid var(--heading);
+  border-radius: 1.5vw;
 }
 
+@media (max-width: 991px) {
+  .image1, .image2, .video1, .video2 { 
+    max-width: 70vw; 
+    margin-right: 15%;
+  }
+}
+
+/* Container for each slideshow */
 .slideshow-container {
   position: relative;
   margin-left: 10%;
@@ -427,16 +382,14 @@ p { /* Default paragraph values, 20px font, newline in <p></p> means newline on 
 
 .threeDslide {
   display: none;
-  border: 10px solid #a7a480;
-  border-radius: 26px;
 }
 
 .threeDslide img {
   width: 100%;
   height: auto;
-  border-radius: 15px;
+  border-radius: 36px;
 }
-
+/* h4 is the name of each project in the 3D Design and Animation Slideshow */
 h4 {
   color: var(--afterglow);
   white-space: pre-line;
@@ -447,7 +400,7 @@ h4 {
   margin-bottom: 0%;
   padding-bottom: 0%;
 }
-
+/* h6 is the year each project was completed during in the 3D Design and Animation Slideshow */
 h6 {
   color: var(--afterglow);
   white-space: pre-line;
@@ -509,7 +462,7 @@ h6 {
   bottom: 5%;
 }
 
-.SnailAngle img, .SnailFront img, .LightingBed img, .LightingGuitar img, .LightingWindow img {
+.SnailAngle img, .SnailFront img, .LightingBed img, .LightingGuitar img, .LightingWindow img, .ThroneClose img, .ThroneFar img {
   border-radius: 36px;
 }
 
@@ -529,8 +482,9 @@ h6 {
 
 .SnailSketch {
   position: absolute;
-  max-width: 23vw;
-  bottom: 0%;
+  max-width: 22vw;
+  bottom: 1%;
+  left: 2%;
   transform: rotate(10deg)
 }
 
@@ -588,11 +542,44 @@ h6 {
   color: var(--heading);
 }
 
+.threeDSlide3Text h4 {
+  margin-top: 12%;
+}
+
+.threeDSLide3Text h6 {
+  margin-bottom: 6%;
+}
+
 .ThroneLabel {
   right: 56vw;  
   top: 47%;
 }
 
+.ThroneSketch {
+  position: absolute;
+  max-width: 37vw;
+  bottom: 5%;
+  left: 3%;
+}
+
+.ThroneFar, .ThroneClose {
+  position: absolute;
+  border: 3px solid var(--afterglow);
+  border-radius: 36px;
+}
+
+.ThroneClose {
+  max-width: 32vw;
+  bottom: 6%;
+  right: 5%;
+}
+
+.ThroneFar {
+  max-width: 32vw;
+  top: 6%;
+  right: 5%;
+}
+/* Fourth slide of the 3D Design and Animation Slideshow */
 .Slide4Container {
   display: grid;
   grid-template-columns: auto auto;
@@ -644,11 +631,9 @@ h5 {
   width: 100%;
   border: 2px solid var(--afterglow);
 }
-
+/* Start of 2D Graphic Design Slides */
 .twoDslide {
   display: none;
-  border: 10px solid var(--tan-brown);
-  border-radius: 26px;
 }
 
 .twoDslide img {
@@ -661,7 +646,7 @@ h7 {
   color: white;
   white-space: pre-line;
   font-weight: bold;
-  font-size: 2.2em; 
+  font-size: 2em; 
   width: 100%;
   line-height: 1em;
   margin-bottom: 0%;
@@ -672,7 +657,7 @@ h8 {
   color: white;
   white-space: pre-line;
   font-style: italic;
-  font-size: 1.8em; 
+  font-size: 1.1em; 
   width: 100%;
   line-height: 1em;
   margin-top: 0%;
@@ -680,7 +665,7 @@ h8 {
   padding: 0%;
 }
 
-
+/* First Slide of 2D Graphic Design */
 .twoDSlide1Text1 {
   text-align: center;
   position: absolute;
@@ -689,28 +674,103 @@ h8 {
   margin-right: 55%;
 }
 
-.twoDSlide1Text1 p, .twoDSlide3Text1 p {
+.twoDSlide1Text1 p, .twoDSlide2Text p, .twoDSlide3Text1 p {
   font-size: 1.1em;
   color: var(--heading);
 }
+
+.DogLaneBag, .DogLaneMiniBags, .DogLaneCup, .DogLaneDesign, .DogLaneLogo, .DogLaneMerch {
+  position: absolute;
+}
+
+.twoDslide1container .container {
+  margin-left: 6%;
+  margin-right: 5%;
+}
+
+.DogLaneBag, .DogLaneMiniBags, .DogLaneCup, .DogLaneMerch {
+  max-width: 15vw;
+  border: 2px solid var(--heading);
+  border-radius: 36px;
+  bottom: 5%;
+}
+
+.DogLaneBag img, .DogLaneMiniBags img, .DogLaneCup img, .DogLaneDesign img, .DogLaneMerch img, .DMDSketch img, .DMDGreen img, .DMDBlue img, .DMDOrange img, .DMDAnimated img, .PosterBlack img, .PosterGray img, .PosterTopText img, .PosterSideText img {
+  border-radius: 35px;
+}
+
+.DogLaneDesign {
+  max-width: 10vw;
+  border: 2px solid var(--heading);
+  border-radius: 36px;
+  right: 10%;
+  bottom: 42%;
+}
+
+.DogLaneLogo {
+  max-width: 23vw;
+  right: 14%;
+  top: 9%;
+}
+
+.dot1, .dot2, .dot3 {
+  height: 4vw;
+  width: 4vw;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot1 {
+  background-color: #A7A584;
+}
+
+.dot2 {
+  background-color: #575A41;
+}
+
+.dot3 {
+  background-color: #AB7057;
+}
+
+.A7A584 {
+  top: 44%; 
+  right: 44%;
+  position: absolute;
+}
+
+.five75A41 {
+  top: 44%; 
+  right: 36.25%;
+  position: absolute;
+}
+ 
+.AB7057 {
+  top: 44%; 
+  right: 28.5%;
+  position: absolute;
+}
+
 /* Condense 2DSlide1 label formatting into one block of code to reduce code use */
-.LogoDesignLabel, .ColorPaletteLabel, .hexcode1, .hexcode2, .hexcode3, .MockupLabel, .PosterLabel {
+.LogoDesignLabel, .ColorPaletteLabel, .hexcode1, .hexcode2, .hexcode3, .MockupLabel, .PosterLabel, .DMDSketchLabel, .DMDVariantsLabel, .DMDAnimatedLabel {
   font-size: 1.2em;
   text-align: center;
   position: absolute;
+}
+
+.LogoDesignLabel, .ColorPaletteLabel, .MockupLabel, .PosterLabel, .DMDSketchLabel, .DMDVariantsLabel, .DMDAnimatedLabel {
   color: var(--heading);
+  text-decoration: underline;
 }
 
 .LogoDesignLabel {
   right: 19.5vw; 
   top: 5%;
-  text-decoration: underline;
+
 }
 
 .ColorPaletteLabel {
   right: 17vw; 
   top: 37%; 
-  text-decoration: underline;
 }
 
 .hexcode1 {
@@ -731,16 +791,79 @@ h8 {
 .MockupLabel {
   right: 34.1vw; 
   top: 62%; 
-  text-decoration: underline;
 }
 
-.twoDSlide3Text1 {
+/* Second Slide of 2D Graphic Design */
+.twoDSlide2Text {
   text-align: center;
   position: absolute;
   white-space: pre-line;
   margin-top: 5%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.DMDSketch, .DMDGreen, .DMDBlue, .DMDOrange, .DMDAnimated {
+  position: absolute;
+  max-width: 13vw; 
+  bottom: 5%;
+  border: 2px solid var(--heading);
+  border-radius: 36px;
+}
+
+.DMDSketch {
+  left: 3%;
+}
+
+.DMDSketchLabel {
+  left: 6%;
+  top: 42%;
+}
+
+.DMDGreen {
+  left: 22%; 
+}
+
+.DMDBlue {
+  left: 41%;
+}
+
+.DMDOrange {
+  left: 60%;
+}
+
+.DMDVariantsLabel {
+  left: 41.5%;
+  top: 42%;
+}
+.DMDAnimated {
+  left: 79%;
+}
+
+.DMDAnimatedLabel {
+  left: 81%;
+  top: 42%;
+}
+
+/* Third Slide of 2D Graphic Design */
+.twoDSlide3Text1 {
+  text-align: center;
+  position: absolute;
+  white-space: pre-line;
+  margin-top: 2%;
   margin-left: 5%;
   margin-right: 60%;
+  font-size: 1.2em;
+}
+
+.twoDSLide3Text1 h7 {
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+}
+
+.twoDSlide3Text1 h8 {
+  padding-top: 0%;
+  margin-top: 0%;
 }
 
 .PosterLabel {
@@ -749,6 +872,36 @@ h8 {
   text-decoration: underline;
 }
 
+.PosterBlack, .PosterGray, .PosterTopText, .PosterSideText {
+  position: absolute;
+  max-width: 16vw;
+  border: 2px solid var(--heading);
+  border-radius: 36px;
+}
+
+.PosterBlack {
+  top: 7%;
+  right: 12%;
+}
+
+.PosterSideText {
+  top: 7%;
+  right: 35%;
+}
+
+.PosterTopText {
+  bottom: 7%;
+  right: 28%;
+  z-index: 1;
+}
+
+.PosterGray {
+  bottom: 7%;
+  right: 5%;
+  z-index: 1;
+}
+
+/* Previous and Next buttons for the slideshows */
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -772,4 +925,72 @@ h8 {
 
 .prev:hover, .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* Contact Section */
+.contactContainer {
+  background-color: var(--tan-brown);
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 1%; 
+  border-radius: 1.5vw; 
+}
+
+.cheading {
+  font-size: 5em;
+  color: var(--afterglow);
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 3%;
+  padding-top: 5%;
+}
+
+.email, .linkedin, .instagram, .toTop {
+  font-size: 1.5em; 
+  font-weight: bold;
+  color: var(--afterglow);
+  background-color: var(--pastel-brown);
+  border-radius: 1.5vw;   
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 2%;
+  padding: 2% 4%;
+}
+
+.email img, .linkedin img, .instagram img {
+  max-width: 2vw; 
+  border-radius: .1em;
+}
+
+.email .container, .linkedin .container, .instagram .container {
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+.email h9 {
+  display: flex;
+  float: right; 
+}
+
+.email button {
+  display: inline-block;
+  background-color: var(--tan-brown);
+  border: 0px;
+  font-family: 'futura-pt';
+  font-size: 1.5vw;
+  color: var(--afterglow);
+  border-radius: 1.5vw;
+  padding: 1% 5%;
+  margin-right: 2%;
+}
+
+.email button:hover {
+  background-color: var(--heading);
+}
+
+.toTop:hover, .linkedin:hover, .instagram:hover {
+  background-color: var(--afterglow);
+  color: var(--heading);
 }
