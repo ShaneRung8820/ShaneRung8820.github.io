@@ -1,10 +1,11 @@
 let current3DSlide = 0;
 let current2DSlide = 0;
 
-function change3DSlide(n) {
+/* Called by the previous and next buttons with n = 1 or n = -1.*/
+function change3DSlide(n) { 
   show3DSlide(current3DSlide += n);
 }
-
+// Displays slide n. The number each slide is given is determined by the order they appear in the HTML file
 function show3DSlide(n) {
   const slides = document.querySelectorAll('.threeDslide');
   if (n >= slides.length) {
@@ -19,10 +20,12 @@ function show3DSlide(n) {
   });
 }
 
-function change2DSlide(n) {
+/* Called by the previous and next buttons with n = 1 or n = -1.*/
+function change2DSlide(n) { 
     show2DSlide(current2DSlide += n);
   }
-  
+
+// Displays slide n. The number each slide is given is determined by the order they appear in the HTML file
 function show2DSlide(n) {
     const slides = document.querySelectorAll('.twoDslide');
     if (n >= slides.length) {
@@ -43,7 +46,8 @@ show3DSlide(current3DSlide);
 // Initialize the second slideshow
 show2DSlide(current2DSlide);
 
-function copyEmail() {
+//Creates an element with my email as the value and copies it to the clipboard
+function copyEmail() { 
   var dummy = document.createElement("input");
   document.body.appendChild(dummy);
   dummy.setAttribute('value', "shane.rung@gmail.com");

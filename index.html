@@ -19,7 +19,7 @@
           </div>
           <!-- Space out navigation link columns equally along the right edge of the screen -->
           <div class="col-1 offset-lg-2 d-flex flex-column justify-content-between">
-            <a href="#about">Meet Shane</a>
+            <a href="#about">About</a>
           </div>
           <div class="col-1 d-flex flex-column justify-content-between">
             <a href='#experience'>Experience</a>
@@ -38,7 +38,7 @@
     </div>
     <!-- Snail background image and Text Logo-->
     <div class="landingpage"> 
-      <img src="assets/FootSnail.jpg" alt="Snail Sandal" class="snail" id="top"> <!-- Background when first opening the page -->
+      <img src="assets/SnailSandal.jpg" alt="Snail Sandal" class="snail" id="top"> <!-- Background when first opening the page -->
       <div class="logo">SHANE RUNG
         DESIGN 
       </div> <!-- Text logo that goes over the Snail background -->
@@ -51,12 +51,12 @@
     <div class="bio"> 
       <div class="container-fluid">
         <div class="row row-eq-height"> <!-- All columns in row are equal height -->
-          <div class="col-12 col-lg-4 d-flex"> <!-- When screen is small, image will be by itself. Otherwise, it is in the left column-->
+          <div class="col-12 col-lg-4 d-flex"> <!-- When screen is md or below, image will be by itself. Otherwise, it is in the left column-->
             <div class="myself"> <!-- Headshot image -->
               <img src="./assets/Headshot.png" alt="Headshot of Shane Rungkagoonnuwat" class="img-fluid">
             </div>    
           </div>
-          <div class="col-12 col-lg-8 rightCol"> <!-- When screen is small, will be by itself. rightCol spe-->
+          <div class="col-12 col-lg-8 rightCol"> <!-- When screen is md or below, will be by itself. rightCol spe-->
             <div class="row my-4"> <!-- Vertical spacing for the about section-->
               <div class="col-12"> <!-- Takes up whole row -->
                 <div class="about"> <!-- Basic about me -->
@@ -75,7 +75,7 @@
                     <b>McGill University </b>
                     M.A. <i>Master of Information Studies, UX Design</i>
                     
-                    
+
                   </p>
                 </div>
               </div>
@@ -169,111 +169,109 @@
         <p>Designed packaging for the brand’s surgical masks, managed social media to attract new customers, and handled purchase orders for web, e-commerce, and wholesale operations.</p>
       </div>
     </div>
-
+    <!-- Links to Resume hosted on Google Drive -->
     <a href="https://drive.google.com/file/d/1zewcW0dywYCPiVSgabC63AdECtQl5o72/view"><div class="download">View Resume</div></a>
     <!-- Featured Video -->
     <h1 id="featured">FEATURED WORK</h1>
     <div class="featuredcontainer">
-      <div class="fheading1">
+      <div class="fheading1"> <!-- Heading Class specifically for Featured -->
         <b>THE CREATURE OF ONE’S MIND</b>
       </div>
-      <div class="fheading2">
+      <div class="fheading2"> <!-- Subheading class specifically for Featured-->
         <b><i>Animated Short (2023)</i></b>
       </div>
-      <div class="container">
-        <div class="row row-eq-height">
-          <div class="col-xs-12 col-sm-12 col-lg-6">
-            <div class="textitem1">
-              <p>“The Creatures of One’s Mind” is a 3D animated short that was created as part of UConn’s Digital Media & Design 2023 B.F.A. Senior Project. The film itself is centered around the theme of inner mental struggle. The short film stars a man going about his mundane daily routine. A small creature appear out of thin air one day and follows him around and prevents him from doing important tasks. No matter how many time he separate himself from the creatures, it keep coming back bigger and stronger. The man eventually comes to terms with the creatures and lives alongside each other.
-                
-                The Creature represent the inner demon within our mind, whether that’s alcoholism, depression, stress, grief or depression, We have constant battle with them everyday. The demon inside our head tell us stories, sometimes to encourage us to take action and other times to discourage us from doing so.
-                
-                The creature models are created in 3D Coat, with animation, rigging, and rendering done in Cinema 4D. The environment and background assets are also designed and created in Cinema 4D.
-              </p>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-lg-6">
-            <div class="row">
-              <div class="col-12">
-                <div class="image1">
-                  <img src="./assets/Desk.png" alt="Creature working on the Computer in an Office. Man gives Creature a Thumbs Up.">
-                </div>
+      <div class="textitem1"> <!-- Basic text description. Not in bootstrap container because it will always span the whole row. -->
+        <p>“The Creatures of One’s Mind” is a 3D animated short that was created as part of UConn’s Digital Media & Design 2023 B.F.A. Senior Project. The film itself is centered around the theme of inner mental struggle. The short film stars a man going about his mundane daily routine. A small creature appear out of thin air one day and follows him around and prevents him from doing important tasks. No matter how many time he separate himself from the creatures, it keep coming back bigger and stronger. The man eventually comes to terms with the creatures and lives alongside each other.
+          
+          The Creature represent the inner demon within our mind, whether that’s alcoholism, depression, stress, grief or depression, We have constant battle with them everyday. The demon inside our head tell us stories, sometimes to encourage us to take action and other times to discourage us from doing so.
+          
+          The creature models are created in 3D Coat, with animation, rigging, and rendering done in Cinema 4D. The environment and background assets are also designed and created in Cinema 4D.
+        </p>
+      </div>
+      <div class="featuredspacing"> <!-- Adds a bit more spacing above the container and below the description-->
+        <div class="container">
+          <div class="row mx-auto"> <!-- Automatically adjust left and right margins -->
+            <div class="col-xs-12 col-sm-12 col-lg-4 d-flex"> <!-- When screen size is md or below, take up an entire row. Otherwise, share with three other images -->
+              <div class="image1"> 
+                <img src="./assets/Desk.png" alt="Creature working on the Computer in an Office. Man gives Creature a Thumbs Up.">
               </div>
             </div>
-            <div class="row">
-              <div class="col-12">
-                <div class="image2">
-                  <img src="./assets/Subway.png" alt="Man and Creature sitting on Subway. Man is visibly upset."/>
-                </div>
+            <div class="col-xs-12 col-sm-12 col-lg-4 d-flex"> <!-- When screen size is md or below, take up an entire row. Otherwise, share with three other images -->
+              <div class="image2"> 
+                <img src="./assets/Subway.png" alt="Man and Creature sitting on Subway. Man is visibly upset."/>
+                <b>Stillshots from the film</b> <!-- Only appears when screen size is large or above, if screen size is not big enough then it is hidden with dispaly:none-->
               </div>
             </div>
-            <div class="row">
-              <div class="col-12">
-                <div class="imageFridge">
-                  <img src="./assets/Fridge.png" alt="Small Creature sitting down in an empty Pizza Box in a Fridge."/>
-                  <b>Stillshots from the film</b>
-                </div>
+            <div class="col-xs-12 col-sm-12 col-lg-4 d-flex"> <!-- When screen size is md or below, take up an entire row. Otherwise, share with three other images -->
+              <div class="imageFridge"> 
+                <img src="./assets/Fridge.png" alt="Small Creature sitting down in an empty Pizza Box in a Fridge."/>
+                <b>Stillshots from the film</b> <!-- Only appears when screen size is medium or below, if screen size is not small enough then it is hidden with dispaly:none-->
               </div>
             </div>
           </div>
+          <div class="row row-eq-height"> 
+            <div class="col-3"> 
+              <div class="image3">
+                <img src="./assets/CreatureFront.png" alt="The Front of the Creature Model." class="img-fluid">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="image4">
+                <img src="./assets/CreatureSide.png" alt="The Side of the Creature Model." class="img-fluid">
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="image5">
+                <img src="./assets/Creature5.JPG" alt="Front of the Small Creature Model" class="img-fluid">
+              </div>
+            </div> 
+            <div class="col-3">
+              <div class="image6">
+                <img src="./assets/Creature6.JPG" alt="Side of the Small Creature Model" class="img-fluid">
+              </div>
+            </div> 
+          </div>
+          <div class="row">
+            <div class="col-4 offset-1 pl-2">
+              <div class="ftext2"><b>Model sculpted in Pligway’s 3D Coat</b></div>
+            </div>
+            <div class="col-4 offset-2 pl-2">
+              <div class="ftext3"><b>Model of the Small Creature</b></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-lg-6"> <!-- Takes up entire row when screen size is md or below-->
+              <div class="video1">
+                <video controls>
+                  <source src="./assets/Model turnable 1.mp4" type="video/mp4">
+                </video>
+                <b>Small Creatures Model Turntable</b>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-lg-6">
+              <div class="video2">
+                <video controls>
+                  <source src="./assets/Model turnable 2.mp4" type="video/mp4">
+                </video>
+                <b>Big Creatures Model Turntable</b>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="fheading3">
+                <b><i>Watch the full-length film below</i></b>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class="video3"> <!-- Always takes up entire row, no need for col-12 -->
+                <video controls>
+                  <source src="./assets/FinalProjectVideo.mp4" type="video/mp4"/>
+                </video>
+              </div>
+            </div>
         </div>
-        <div class="row row-eq-height">
-          <div class="col-3 mr-2"> 
-            <div class="image3">
-              <img src="./assets/CreatureFront.png" alt="The Front of the Creature Model." class="img-fluid">
-            </div>
-          </div>
-          <div class="col-3 mx-2">
-            <div class="image4">
-              <img src="./assets/CreatureSide.png" alt="The Side of the Creature Model." class="img-fluid">
-            </div>
-          </div>
-          <div class="col-3 offset-1">
-            <div class="image5">
-              <img src="./assets/CreatureDesign.png" alt="The Front of the Creature Model." class="img-fluid">
-            </div>
-          </div> 
-        </div>
-        <div class="row">
-          <div class="col-4 offset-1 pl-2">
-            <div class="ftext2"><b>Model sculpted in Pligway’s 3D Coat</b></div>
-          </div>
-          <div class="col-4 offset-2">
-            <div class="ftext3"><b>Initial Creature design on paper</b></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-12 col-lg-6">
-            <div class="video1">
-              <video controls>
-                <source src="./assets/Model turnable 1.mp4" type="video/mp4">
-              </video>
-              <b>Small Creatures Model Turntable</b>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-lg-6">
-            <div class="video2">
-              <video controls>
-                <source src="./assets/Model turnable 2.mp4" type="video/mp4">
-              </video>
-              <b>Big Creatures Model Turntable</b>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="fheading3">
-              <b><i>Watch the full-length film below</i></b>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-            <div class="video3">
-              <video controls>
-                <source src="./assets/FinalProjectVideo.mp4" type="video/mp4"/>
-              </video>
-            </div>
-          </div>
       </div>
     </div>
     <h1 id="portfolio">PORTFOLIO</h1> <!-- Portfolio -->
@@ -281,7 +279,7 @@
     <h3>3D Design & Animation</h3>
     <div class="slideshow-container" id="threeDslideshow"> <!-- 3D Design Slideshow -->
       <div class="threeDslide"> <!-- First slide discussing snail sandal creature -->
-        <div class="threeDSlide1Text">
+        <div class="threeDSlide1Text"> <!-- Main text of slide, includes title and description-->
           <h4><b>SNAIL’S SANDAL</b></h4>
           <h6><i>2021</i></h6>
           <p><b>The goal of this project is to create a fantasy beast. Something totally unconventional yet in perfect balance with its natural setting. It is my intention to create items that, upon first view, seem completely normal, but, upon closer inspection, reveal a surprising depth of character. 
@@ -290,25 +288,25 @@
         </div>
         <div class="InitialLabel">Initial Sketch</div>
         <div class="FinalLabel">Final Render</div>
-        <div class="SnailAngle"><img src="./assets/FootSnailAngle.png" alt="A Render of Snail's Sandal, a snail-like creature with toes on its face and a rocky shell shaped like a sandal. It is in a dark, grassy field with a couple of rocks nearby."></div>
-        <div class="SnailFront"><img src="./assets/FootSnailFront.png" alt="The same render of Snail's Sandal, from a front-facing angle."></div>
-        <div class="SnailRender"><img src="./assets/FootSnailRender.png" alt="The Final Model of Snail's Sandal"></div>
-        <div class="SnailSketch"><img src="./assets/FootSnailSketch.png" alt="The Initial Sketch of Snail's Sandal"></div>
-        <img src="./assets/3DSlide1.png" alt="Pastel Green Background">
+        <div class="SnailAngle"><img src="./assets/SnailSandalAngle.png" alt="A Render of Snail's Sandal, a snail-like creature with toes on its face and a rocky shell shaped like a sandal. It is in a dark, grassy field with a couple of rocks nearby."></div>
+        <div class="SnailFront"><img src="./assets/SnailSandalFront.png" alt="The same render of Snail's Sandal, from a front-facing angle."></div>
+        <div class="SnailRender"><img src="./assets/SnailSandalRender.png" alt="The Final Model of Snail's Sandal"></div>
+        <div class="SnailSketch"><img src="./assets/SnailSandalSketch.png" alt="The Initial Sketch of Snail's Sandal"></div>
+        <img src="./assets/3DSlide1.png" alt="Pastel Green Background"> <!-- Background of slide -->
       </div>
       <div class="threeDslide"> <!-- Second slide discussing a Bedroom Lighting and Rendering Project -->
-        <div class="threeDSlide2Text">
+        <div class="threeDSlide2Text"> <!-- Main text of slide, includes title and description-->
           <h4><b>LIGHTING & RENDERING I</b></h4>
           <h6><i>2020</i></h6>
           <p><b>My project on advanced lighting techniques, including ambient occlusion, ray tracing, and global illumination. Also covered: dramatic lighting, 3-point lighting, shadows, materials, generated textures, bump maps, displacement maps, and more. Utilized Cinema 4D to create the lighting, textures, and final renders for the scene, adding effects like reflection, roughness, displacement, etc.</b></p>
         </div>
-        <div class="LightingBed"><img src="./assets/LightingBed.png" alt="An empty bedroom, frame is centered on a bed topped with a muted green blanket. On the left of the bed is a red guitar standing in front of a wooden nightstand. Several paintings hang on the wall behind the bed."></div>
+        <div class="LightingBed"><img src="./assets/LightingBed.png" alt="An empty bedroom, centered on a bed with a muted green blanket. On the left of the bed is a red guitar standing in front of a wooden nightstand. Several paintings hang on the wall behind the bed."></div>
         <div class="LightingGuitar"><img src="./assets/LightingGuitar.png" alt="The bedroom as seen from the top of the nightstand. The neck of the guitar covers the left third of the image, and a red cup is on the nightstand to the left of the guitar. The bed is not made. A desk with a black computer on top can be seen in the right half of the room."></div>
         <div class="LightingWindow"><img src="./assets/LightingWindow.png" alt="A bedroom from an elevated angle. The bed spans the bottom left corner, with the window prominently displayed on the right wall. Several paintings cover the wall on the left side, and a wooden, corner to ceiling dresser "></div>
-        <img src="./assets/3DSlide2.png" alt="Image 2">
+        <img src="./assets/3DSlide2.png" alt="Green Background"> <!-- Background of slide -->
       </div>
       <div class="threeDslide"> <!-- Third Slide discussing a Throne Room -->
-        <div class="threeDSlide3Text">
+        <div class="threeDSlide3Text"> <!-- Main text of slide, includes title and description-->
           <h4><b>A THRONE FIT FOR A KING</b></h4>
           <h6><i>2021</i></h6>
           <p><b>Created a stylistic throne based on elements from East Asian architecture.  Model, texture and lighting all done in Cinema 4D, the throne showcases homage to design element from the region such as the symmetry of Japanese Torii Gates and the dark red lacquers that can be found in the Chinese Qianlong-era Furniture.</b></p>
@@ -317,11 +315,11 @@
         <div class="ThroneSketch"><img src="./assets/ThroneSketch.png"></div>
         <div class="ThroneFar"><img src="./assets/ThroneFar.png"></div>
         <div class="ThroneClose"><img src="./assets/ThroneClose.png"></div>
-        <img src="./assets/3DSlide3.png" alt="Image 3">
+        <img src="./assets/3DSlide3.png" alt="Pastel Green Background"> <!-- Background of slide -->
       </div>
       <div class="threeDslide"> <!-- Fourth slide showcasing various simulation videos -->
-        <div class="Slide4Container">
-          <div class="threeDSlide4Text">
+        <div class="Slide4Container"> <!-- Uses container for a grid system -->
+          <div class="threeDSlide4Text"> <!-- Main text of slide, includes title and description-->
             <h4><b>3D SIMULATION</b></h4>
             <h6><i>2021</i></h6> 
             <p><b>Created physical simulations demonstrating proficiency in the use of particle systems and collision detection. Making complex rendering and compositing setups that allow for more render time efficiency and creative freedom within the constraints of a given animation or VFX sequence.</b></p>
@@ -341,7 +339,7 @@
             <p><b>A Rube Goldberg machine in Cinema 4d, making use of the Cinema4D's soft and hard body dynamics.</b></p>
           </div>
         </div>
-        <img src="./assets/3DSlide4.png" alt="Image 4">
+        <img src="./assets/3DSlide4.png" alt="Green Background"> <!-- Background of slide -->
       </div>
       <a class="prev" onclick="change3DSlide(-1)">&#10094;</a>
       <a class="next" onclick="change3DSlide(1)">&#10095;</a>
@@ -350,7 +348,7 @@
     <h3>2D Graphic Design</h3>
     <div class="slideshow-container" id="twoDslideshow"> <!-- Second slideshow discussing 2D Graphic Design Projects -->
       <div class="twoDslide"> <!-- First slide discussing a branding redesign of a local cafe -->
-        <div class="twoDSlide1Text1">
+        <div class="twoDSlide1Text1"> <!-- Main text of slide, includes title and description-->
           <h7>DOG LANE REDESIGN
           </h7>
           <h8>2021</h8>
@@ -358,14 +356,14 @@
         </div>
         <div class="LogoDesignLabel">Logo Design</div>
         <div class="ColorPaletteLabel">Color Palette & Pattern</div>
-        <div class="hexcode1">#A7A584</div>
+        <div class="hexcode1">#A7A584</div> 
         <div class="hexcode2">#575A41</div>
         <div class="hexcode3">#AB7057</div>
         <div class="MockupLabel">Product Mockup Design</div>
-        <div class="twoDSlide1container">
-          <div class="container">
-            <div class="row">
-              <div class="col-3">
+        <div class="twoDSlide1container"> <!-- Container to hold bootstrap grid -->
+          <div class="container-fluid">
+            <div class="row mx-auto">
+              <div class="col-3"> 
                 <div class="DogLaneBag"><img src="./assets/DogLane/DogLaneBag.png" class="img-fluid"></div>
               </div>
               <div class="col-3">
@@ -382,13 +380,13 @@
         </div>
         <div class="DogLaneDesign"><img src="./assets/DogLane/DogLaneDesign.png"></div>
         <div class="DogLaneLogo"><img src="./assets/DogLane/DogLaneLogo.png"></div>
-        <div class="A7A584"><span class="dot1"></span></div>
+        <div class="A7A584"><span class="dot1"></span></div> <!-- Three circles showcasing the color scheme -->
         <div class="five75A41"><span class="dot2"></span></div>
         <div class="AB7057"><span class="dot3"></span></div>
-        <img src="./assets/2DSlide1.png" alt="Image 1">
+        <img src="./assets/2DSlide1.png" alt="Tan Background">
       </div>
       <div class="twoDslide"> <!-- Second slide discussing a poster design with several variants -->
-        <div class="twoDSlide2Text">
+        <div class="twoDSlide2Text"> <!-- Main text of slide, includes title and description-->
           <h7>DMD B.F.A. POSTERS DESIGN</h7>
           <h8>2019</h8>
           <p><b>This series of posters was created as promotional content for the University of Connecticut’s Digital Media & Design Senior Exhibition. Inspire by Sci-fi movie visuals,  the graphics were crafted using Illustrator and Photoshop, while the animated gradient was curated in After Effects.</b></p>
@@ -411,10 +409,10 @@
         <div class="DMDAnimated">
           <img src="./assets/DMD/DMDAnimated.gif">
         </div>
-        <img src="./assets/2DSlide2.png" alt="Image 2">
+        <img src="./assets/2DSlide2.png" alt="Reddish Brown Background">
       </div>
       <div class="twoDslide"> <!-- Third slide discussing several posters made in partnership with PursueCare-->
-        <div class="twoDSlide3Text1">
+        <div class="twoDSlide3Text1"> <!-- Main text of slide, includes title and description-->
           <h7>PURSUECARE POSTERS 
             DESIGN
           </h7><h8>2022</h8>
@@ -435,7 +433,7 @@
         <div class="PosterTopText">
           <img src="./assets/PursueCare/PursueCareTopText.png">
         </div>
-        <img src="./assets/2DSlide3.png" alt="Image 3">
+        <img src="./assets/2DSlide3.png" alt="Tan Background">
       </div>
       <a class="prev" onclick="change2DSlide(-1)">&#10094;</a>
       <a class="next" onclick="change2DSlide(1)">&#10095;</a>
@@ -454,7 +452,7 @@
               EMAIL <img src="./assets/Contact/email.png">
             </div>
             <div class="col-1 offset-4">
-              <button onclick="copyEmail()"><b>Copy</b></button>
+              <button onclick="copyEmail()"><b>Copy</b></button> <!-- Copies Email to Clipboard -->
             </div>
             <div class="col-4">
               <h9>shane.rung@gmail.com</h9>
@@ -475,7 +473,7 @@
         <div class="container">
           <div class="row">
             <div class="col-4">
-              INSTAGRAM    <img src="./assets/Contact/instagram.png">
+              INSTAGRAM <img src="./assets/Contact/Instagram.png">
             </div>
           </div>
         </div>
@@ -494,10 +492,6 @@
 
 
     </p>
-    <script src="./assets/script.js"></script>
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./assets/script.js"></script> <!-- Javascript file with code for slideshow and copying email -->
   </body>
 </html>

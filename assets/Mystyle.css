@@ -18,10 +18,7 @@
   background-color: var(--afterglow);
   /* Force global navigation bar to stick at top of page */
   position: fixed;
-  /* Remove margins from top and left side, stretch across width of entire page*/
-  top: 0;
-  left: 0;
-  right:0;
+  /* Stretch across width of entire page*/
   width: 100%;
   /* Force topnav to render above every element in the page */
   z-index: 10; 
@@ -41,10 +38,11 @@
 .topnav a { /* Style the links inside the navigation bar */
   display:inline-block; /* Does not add a new-line afterwards */
   background-color: var(--green-light);
+  font-weight: bold; 
   /* Make text borders rounded, create extra space between each bubble and edges of header. Padding to make bubble extend to left and right of text */
   border-radius: 2vw; 
   margin-top: 25%;  
-  padding: clamp(4px, 4vw, 12px);
+  padding: clamp(4px, 4vw, 8px); 
   /* Font formatting */
   font-size: clamp(8px, 4vw, 16px);
   text-align: center; /* Centers Text */
@@ -302,58 +300,69 @@ p {
 }
 
 .textitem1 { /* Description of Project */
-  margin-left: 8%;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-top: 5%;
-  margin-right: 0%; 
   font-size: 16px;
   color: black;
 }
 
+.featuredspacing {
+  margin-right: 12%;
+}
+
 /* Add a border to all featured work images and videos */
-.image1 img, .image2 img, .imageFridge img, .image3 img, .image4 img, .image5 img, .video1 video, .video2 video {
+.image1 img, .image2 img, .imageFridge img, .image3 img, .image4 img, .image5 img, .image6 img, .video1 video, .video2 video {
   border: 5px solid var(--green-dark);
   border-radius: 36px;
   width: 100%;
 }
 
-.imageFridge img {
-  margin-bottom: 1.5%; 
+.imageFridge img, .image2 img {
+  margin-bottom: 2%; 
 }
 
 .image1, .image2, .imageFridge {
-  max-width: 25vw; 
+  max-width: 24vw;  
+  margin-top: 5%;
   height: 100%; 
   vertical-align: middle;
   text-align: center;
   object-fit: cover;
 }
 
-.image1 {
-  margin-top: 7%;
-  margin-left: 10%;
-}
-
-.image2 { /* Image of Man and Creature in Office */
-  margin-top: 2.1%;
-  margin-left: 10%;
-}
-
-.imageFridge {
-  margin-top: 2.1%;  
-  margin-left: 10%; 
+.imageFridge, .image2 {
   font-size: clamp(16px, 4vw, 19px); 
 }
 
-.image3, .image4, .image5 { /* Images of Model Sculpts and Creature Design */
-  margin-top: 12%; 
+@media (min-width: 992px) {
+  .imageFridge b { /* Do not show text below fridge image for xs and sm */
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+
+}
+
+.image3, .image4, .image5, .image6 { /* Images of Model Sculpts and Creature Design */
+  margin-top: 14%;  
   margin-bottom: 2%;
   margin-left: 16%;
   vertical-align: middle;
-  max-width: 20vw;
+  max-width: 30vw;  
 } 
 
 .image4 {
   transform: translateX(-6%);
+}
+
+.image5 {
+  transform: translateX(-12%);
+}
+
+.image6{
+  transform: translateX(-18%); 
 }
 
 .ftext2, .ftext3 {
@@ -367,23 +376,23 @@ p {
 }
 
 .ftext3 {
-  padding-right: 7%; 
+  padding-right: 13%; 
 }
 
 .video1, .video2 { /* Model Rotation Videos */
   margin-top: 8%;
-  max-width: 29vw;
+  max-width: 32vw;
   vertical-align: middle;
   text-align: center;
   font-size: clamp(16px, 4vw, 19px);
 }
 
 .video1 {
-  transform: translateX(8%);
+  transform: translateX(2%);
 }
 
 .video2 {
-  transform: translateX(-2%);
+  transform: translateX(-1%);
 }
 
 .video1 video, .video2 video {
@@ -393,15 +402,16 @@ p {
 .fheading3 { /* Full Video introduction */
   margin-top: 4%;
   padding-top: 0%; 
+  margin-right: 5%;
   color: var(--afterglow);
   font-size: clamp(25px, 6vw, 50px);
   text-align: center;
 }
 
 .video3 { /* Full Video for the Project */
-  max-width: 61.7vw;
+  max-width: 66.5vw;
   margin-bottom: 2%;
-  margin-left: 3.8%;
+  margin-left: 1%;
   padding-top: 1%;
   vertical-align: middle;
   text-align: center;
@@ -415,16 +425,12 @@ p {
 
 @media (max-width: 991px) { /* Increases size of some images and videos for small screens */
   .image1, .image2, .imageFridge, .video1, .video2 { 
-    max-width: 70vw; 
-    margin-right: 15%;
-  }
-  .textitem1, .image1, .image2, .imageFridge, .video1, .video2, .video3, .fheading3 {
-    margin-left: 0%;
-    margin-right: 15%;
+    max-width: 80vw; 
+    margin-right: 0%;
   }
 
   .video1 {
-    transform: translateX(-1%);
+    transform: translateX(0%);
   }
   .video2 {
     transform: translateX(.1%);
@@ -436,6 +442,10 @@ p {
 
   .video3 video {
     border: 5px solid var(--heading);
+  }
+
+  .image2 b { /* Do not show text below subway image for xs and sm */
+    display: none;
   }
 }
 
@@ -615,13 +625,13 @@ h6 { /* h6 is the year each project was completed during in the 3D Design and An
 
 .ThroneLabel {
   right: 56vw;  
-  top: 47%;
+  top: 50%;
 }
 
 .ThroneSketch {
   position: absolute;
   max-width: 37vw;
-  bottom: 5%;
+  bottom: 3%;
   left: 3%;
 }
 
@@ -655,6 +665,7 @@ h6 { /* h6 is the year each project was completed during in the 3D Design and An
 }
 
 .threeDSlide4Text {
+  margin-top: -5%;
   display: table-cell;
   grid-area: 1 / 1 / 1 / 3;
 }
@@ -675,6 +686,10 @@ h6 { /* h6 is the year each project was completed during in the 3D Design and An
 
 .threeDSlide4Video2 {
   grid-area: 2 / 2 / 2 / 3;
+}
+
+.threeDSlide4Video1 p, .threeDSlide4Video2 p {
+  margin-top: 2%;
 }
 
 h5 {
