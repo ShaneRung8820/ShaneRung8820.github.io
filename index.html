@@ -6,99 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </header>
   <body>
-    <div class="topnav">
+    <!-- Top Navigation Bar -->
+    <div class="topnav"> 
       <div class="container-fluid mx-auto">
-        <div class="row">
-          <div class="col-1 offset-1">
-            <img src="assets/Logo-removebg-preview.png" alt="Line Art Outline of Shane Rungkagoonnuwat" class="navImage">
+        <div class="row row-eq-height"> <!-- All columns in row are equal height -->
+          <div class="col-1 offset-1"> <!-- Column sticks to the left, empty space in first column -->
+            <img src="./assets/Logo-removebg-preview.png" alt="Line Art Outline of Shane Rungkagoonnuwat" class="navImage">
           </div>
-          <div class="col-2 offset-xs-1 offset-sm-1 offset-lg-0">
+          <div class="col-2 offset-xs-1 offset-sm-1 offset-lg-0"> <!-- Shift column right when screen size is small to prevent overlap with image -->
             <p><b>SHANE RUNG 
-              DESIGN</b></p>
+              DESIGN</b></p> 
           </div>
-          <div class="col-1 offset-lg-2">
+          <!-- Space out navigation link columns equally along the right edge of the screen -->
+          <div class="col-1 offset-lg-2 d-flex flex-column justify-content-between">
             <a href="#about">Meet Shane</a>
           </div>
           <div class="col-1 d-flex flex-column justify-content-between">
             <a href='#experience'>Experience</a>
           </div>
           <div class="col-1 d-flex flex-column justify-content-between">
-            <a href="#featured">Featured Work</a>
+            <a href="#featured">Featured</a>
           </div>
           <div class="col-1 d-flex flex-column justify-content-between">
             <a href="#portfolio">Portfolio</a>
           </div>
           <div class="col-1 d-flex flex-column justify-content-between">
-            <a href="#contact" class="lastNavItem">Contact</a>
+            <a href="#contact">Contact</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="landingpage">
-      <img src="assets/FootSnail.jpg" alt="Foot Snail" class="snail"  id="top">
+    <!-- Snail background image and Text Logo-->
+    <div class="landingpage"> 
+      <img src="assets/FootSnail.jpg" alt="Snail Sandal" class="snail" id="top"> <!-- Background when first opening the page -->
       <div class="logo">SHANE RUNG
         DESIGN 
-      </div>
+      </div> <!-- Text logo that goes over the Snail background -->
     </div>
-    <div class="overlay">
-      <h1 id="about"> MEET SHANE </h1>
+    <!-- Background that covers part of snail image -->
+    <div class="overlay"> <!-- Adds a curved border radius over the bottom of the snail background -->
+      <h1 id="about"> MEET SHANE </h1> <!-- Meet Shane button goes here-->
     </div>
-    <p>
-
-
-
-
-
-
-    </p>
-    <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <div class="myself">
-            <img src="./assets/Headshot.png" alt="Headshot of Shane Rungkagoonnuwat" class="img-fluid">
-          </div>    
-        </div>
-        <div class="col-8 ">
-          <div class="row">
-            <div class="col-12">
-              <div class="about">
-                <div class="aboutheading">Artist, Designer, and Storyteller; <b>That's Shane.</b></div>
-                <p>Shane Rungkagoonnuwat is a Montreal-based designer with a passion for blending art and technology. With a B.F.A. in Digital Media & Design from the University of Connecticut, he specializes in 3D animation, rigging, modeling, and texturing, creating compelling visuals for media, advertising, and business. Now pursuing a Master of Information Studies at McGill University, Shane is diving deeper into UX design, focusing on innovative, human-centered solutions.</p>
-              </div>
-            </div>
+    <!-- Bootstrap grid containing About Me Information -->
+    <div class="bio"> 
+      <div class="container-fluid">
+        <div class="row row-eq-height"> <!-- All columns in row are equal height -->
+          <div class="col-12 col-lg-4 d-flex"> <!-- When screen is small, image will be by itself. Otherwise, it is in the left column-->
+            <div class="myself"> <!-- Headshot image -->
+              <img src="./assets/Headshot.png" alt="Headshot of Shane Rungkagoonnuwat" class="img-fluid">
+            </div>    
           </div>
-          <div class="row row-eq-height">
-            <div class="col-6">
-              <div class="education">
-                <div class="subheading"><b>EDUCATION</b></div>
-                <p><b>University of Connecticut</b>
-                  B.F.A. <i>Digital Media & Design, 3D Animation</i>
-        
-                  <b>McGill University </b>
-                  M.A. <i>Master of Information Studies, UX Design</i>
-                  
-                </p>
+          <div class="col-12 col-lg-8 rightCol"> <!-- When screen is small, will be by itself. rightCol spe-->
+            <div class="row my-4"> <!-- Vertical spacing for the about section-->
+              <div class="col-12"> <!-- Takes up whole row -->
+                <div class="about"> <!-- Basic about me -->
+                  <div class="aboutheading">Artist, Designer, and Storyteller; <b>That's Shane.</b></div>
+                  <p>Shane Rungkagoonnuwat is a Montreal-based designer with a passion for blending art and technology. With a B.F.A. in Digital Media & Design from the University of Connecticut, he specializes in 3D animation, rigging, modeling, and texturing, creating compelling visuals for media, advertising, and business. Now pursuing a Master of Information Studies at McGill University, Shane is diving deeper into UX design, focusing on innovative, human-centered solutions.</p>
+                </div>
               </div>
             </div>
-            <div class="col-6">
-              <div class="skills">
-                <div class="subheading"><b>SKILL</b></div>
-                <p><b>3D:</b> Cinema 4D, Autodesk Maya, Mudbox, 3D Coat, Blender
-        
-                  <b>Adobe:</b> Photoshop, Illustrator, InDesign, Premiere Pro, After Effect, XD, Lightroom
-        
-                  <b>Languages:</b> English (Fluent), Thai (Fluent), Lao (Conversational)
-                </p>
+            <div class="row row-eq-height">
+              <div class="col-6 d-flex flex-column"> <!-- Column takes up half of row -->
+                <div class="education"> <!-- Degrees -->
+                  <div class="subheading"><b>EDUCATION</b></div>
+                  <p><b>University of Connecticut</b>
+                    B.F.A. <i>Digital Media & Design, 3D Animation</i>
+          
+                    <b>McGill University </b>
+                    M.A. <i>Master of Information Studies, UX Design</i>
+                    
+                    
+                  </p>
+                </div>
+              </div>
+              <div class="col-6 d-flex flex-column"> <!-- Column takes up half of row -->
+                <div class="skills"> <!-- Various Skills -->
+                  <div class="subheading"><b>SKILL</b></div>
+                  <p><b>3D:</b> Cinema 4D, Autodesk Maya, Mudbox, 3D Coat, Blender
+                    <b>Adobe:</b> Photoshop, Illustrator, InDesign, Premiere Pro, After Effect, XD, Lightroom
+                    <b>Languages:</b> English (Fluent), Thai (Fluent), Lao (Conversational)
+
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
+    <!-- Demo Reel Video -->
     <h2>DEMO REEL</h2>
-    <div class="demoreelcontainer">
-      <div class="demoreel">
+    <div class="demoreelcontainer"> <!-- Formatting of Border around video -->
+      <div class="demoreel"> <!-- Formatting of the Demo Reel Video -->
         <video controls>
           <source src="./assets/DemoReel_Final.mp4" type="video/mp4"/>
         </video>
@@ -107,16 +106,17 @@
     <p>
       
     </p>
-    <h1 id="experience"> WORK EXPERIENCE </h1>
+    <!-- All Experience -->
+    <h1 id="experience">EXPERIENCE </h1> 
 
-    <div class="experience">
-      <div class="jobh">
+    <div class="experience"> <!-- Box for the job/experience -->
+      <div class="jobh"> <!-- Formatting for employer, title, and duration. Left column -->
         <p><b>McGill University</b>
           <i>Alumni Engagement Specialist </i>
           Sep - Dec 2023
         </p>
       </div>
-      <div class="jobd">
+      <div class="jobd"> <!-- Formatting for description. Right column -->
         <p>Leveraged interpersonal and sales skills to secure funding for McGill initiatives through targeted cold calling, resolving alumni concerns with a solution-focused approach to enhance donor experience.</p>
       </div>
     </div>
@@ -170,8 +170,8 @@
       </div>
     </div>
 
-    <div class="download"><a>Download Resume</a></div>
-
+    <a href="https://drive.google.com/file/d/1zewcW0dywYCPiVSgabC63AdECtQl5o72/view"><div class="download">View Resume</div></a>
+    <!-- Featured Video -->
     <h1 id="featured">FEATURED WORK</h1>
     <div class="featuredcontainer">
       <div class="fheading1">
@@ -181,15 +181,13 @@
         <b><i>Animated Short (2023)</i></b>
       </div>
       <div class="container">
-        <div class="row">
+        <div class="row row-eq-height">
           <div class="col-xs-12 col-sm-12 col-lg-6">
             <div class="textitem1">
               <p>“The Creatures of One’s Mind” is a 3D animated short that was created as part of UConn’s Digital Media & Design 2023 B.F.A. Senior Project. The film itself is centered around the theme of inner mental struggle. The short film stars a man going about his mundane daily routine. A small creature appear out of thin air one day and follows him around and prevents him from doing important tasks. No matter how many time he separate himself from the creatures, it keep coming back bigger and stronger. The man eventually comes to terms with the creatures and lives alongside each other.
                 
-      
                 The Creature represent the inner demon within our mind, whether that’s alcoholism, depression, stress, grief or depression, We have constant battle with them everyday. The demon inside our head tell us stories, sometimes to encourage us to take action and other times to discourage us from doing so.
                 
-      
                 The creature models are created in 3D Coat, with animation, rigging, and rendering done in Cinema 4D. The environment and background assets are also designed and created in Cinema 4D.
               </p>
             </div>
@@ -198,25 +196,29 @@
             <div class="row">
               <div class="col-12">
                 <div class="image1">
-                  <img src="./assets/Desk.png" alt="Creature working on the Computer in an Office">
+                  <img src="./assets/Desk.png" alt="Creature working on the Computer in an Office. Man gives Creature a Thumbs Up.">
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-12">
                 <div class="image2">
-                  <p>
-                  <img src="./assets/Subway.png" alt="Man and Creature sitting on Subway"/>
-                  
+                  <img src="./assets/Subway.png" alt="Man and Creature sitting on Subway. Man is visibly upset."/>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="imageFridge">
+                  <img src="./assets/Fridge.png" alt="Small Creature sitting down in an empty Pizza Box in a Fridge."/>
                   <b>Stillshots from the film</b>
-                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="row row-eq-height">
-          <div class="col-3 mr-2">
+          <div class="col-3 mr-2"> 
             <div class="image3">
               <img src="./assets/CreatureFront.png" alt="The Front of the Creature Model." class="img-fluid">
             </div>
@@ -230,37 +232,31 @@
             <div class="image5">
               <img src="./assets/CreatureDesign.png" alt="The Front of the Creature Model." class="img-fluid">
             </div>
-          </div>
+          </div> 
         </div>
         <div class="row">
           <div class="col-4 offset-1 pl-2">
-            <p><b>Model sculpted in Pligway’s 3D Coat</b></p>
+            <div class="ftext2"><b>Model sculpted in Pligway’s 3D Coat</b></div>
           </div>
           <div class="col-4 offset-2">
-            <p><b>Initial Creature design on paper</b></p>
+            <div class="ftext3"><b>Initial Creature design on paper</b></div>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-lg-6">
             <div class="video1">
-              <p>
-                <video controls>
-                  <source src="./assets/Model turnable 1.mp4" type="video/mp4">
-                </video>
-      
-                <b>Small Creatures Model Turntable</b>
-              </p>
+              <video controls>
+                <source src="./assets/Model turnable 1.mp4" type="video/mp4">
+              </video>
+              <b>Small Creatures Model Turntable</b>
             </div>
           </div>
           <div class="col-xs-12 col-sm-12 col-lg-6">
             <div class="video2">
-              <p>
-                <video controls>
-                  <source src="./assets/Model turnable 2.mp4" type="video/mp4">
-                </video>
-                
-                <b>Big Creatures Model Turntable</b>
-              </p>
+              <video controls>
+                <source src="./assets/Model turnable 2.mp4" type="video/mp4">
+              </video>
+              <b>Big Creatures Model Turntable</b>
             </div>
           </div>
         </div>
@@ -272,21 +268,19 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-12">
             <div class="video3">
               <video controls>
                 <source src="./assets/FinalProjectVideo.mp4" type="video/mp4"/>
               </video>
             </div>
           </div>
-        </div>
       </div>
     </div>
-    <h1 id="portfolio">PORTFOLIO</h1>
+    <h1 id="portfolio">PORTFOLIO</h1> <!-- Portfolio -->
 
     <h3>3D Design & Animation</h3>
-    <div class="slideshow-container" id="threeDslideshow">
-      <div class="threeDslide">
+    <div class="slideshow-container" id="threeDslideshow"> <!-- 3D Design Slideshow -->
+      <div class="threeDslide"> <!-- First slide discussing snail sandal creature -->
         <div class="threeDSlide1Text">
           <h4><b>SNAIL’S SANDAL</b></h4>
           <h6><i>2021</i></h6>
@@ -296,13 +290,13 @@
         </div>
         <div class="InitialLabel">Initial Sketch</div>
         <div class="FinalLabel">Final Render</div>
-        <div class="SnailAngle"><img src="./assets/FootSnailAngle.png" alt="A Render of a Foot Snail, a snail-like creature with toes on its face and a rocky shell. It is in a dark, grassy field with a couple of rocks nearby. The render is angled slightly above the snail, looking down on it."></div>
-        <div class="SnailFront"><img src="./assets/FootSnailFront.png" alt="The same render of a Foot Snail, now from a front-facing angle."></div>
-        <div class="SnailRender"><img src="./assets/FootSnailRender.png" alt="The Final Model of the Foot Snail, a snail-like creature with toes on its face. Its rocky shell connects to a flat rock below it, similar to the straps of a sandal."></div>
-        <div class="SnailSketch"><img src="./assets/FootSnailSketch.png" alt="The Initial Sketch of the Foot Snail"></div>
-        <img src="./assets/3DSlide1.png" alt="Pastel Green Background with Swirly Lines in the corners">
+        <div class="SnailAngle"><img src="./assets/FootSnailAngle.png" alt="A Render of Snail's Sandal, a snail-like creature with toes on its face and a rocky shell shaped like a sandal. It is in a dark, grassy field with a couple of rocks nearby."></div>
+        <div class="SnailFront"><img src="./assets/FootSnailFront.png" alt="The same render of Snail's Sandal, from a front-facing angle."></div>
+        <div class="SnailRender"><img src="./assets/FootSnailRender.png" alt="The Final Model of Snail's Sandal"></div>
+        <div class="SnailSketch"><img src="./assets/FootSnailSketch.png" alt="The Initial Sketch of Snail's Sandal"></div>
+        <img src="./assets/3DSlide1.png" alt="Pastel Green Background">
       </div>
-      <div class="threeDslide">
+      <div class="threeDslide"> <!-- Second slide discussing a Bedroom Lighting and Rendering Project -->
         <div class="threeDSlide2Text">
           <h4><b>LIGHTING & RENDERING I</b></h4>
           <h6><i>2020</i></h6>
@@ -313,7 +307,7 @@
         <div class="LightingWindow"><img src="./assets/LightingWindow.png" alt="A bedroom from an elevated angle. The bed spans the bottom left corner, with the window prominently displayed on the right wall. Several paintings cover the wall on the left side, and a wooden, corner to ceiling dresser "></div>
         <img src="./assets/3DSlide2.png" alt="Image 2">
       </div>
-      <div class="threeDslide">
+      <div class="threeDslide"> <!-- Third Slide discussing a Throne Room -->
         <div class="threeDSlide3Text">
           <h4><b>A THRONE FIT FOR A KING</b></h4>
           <h6><i>2021</i></h6>
@@ -325,7 +319,7 @@
         <div class="ThroneClose"><img src="./assets/ThroneClose.png"></div>
         <img src="./assets/3DSlide3.png" alt="Image 3">
       </div>
-      <div class="threeDslide">
+      <div class="threeDslide"> <!-- Fourth slide showcasing various simulation videos -->
         <div class="Slide4Container">
           <div class="threeDSlide4Text">
             <h4><b>3D SIMULATION</b></h4>
@@ -354,8 +348,8 @@
     </div>
 
     <h3>2D Graphic Design</h3>
-    <div class="slideshow-container" id="twoDslideshow">
-      <div class="twoDslide">
+    <div class="slideshow-container" id="twoDslideshow"> <!-- Second slideshow discussing 2D Graphic Design Projects -->
+      <div class="twoDslide"> <!-- First slide discussing a branding redesign of a local cafe -->
         <div class="twoDSlide1Text1">
           <h7>DOG LANE REDESIGN
           </h7>
@@ -393,7 +387,7 @@
         <div class="AB7057"><span class="dot3"></span></div>
         <img src="./assets/2DSlide1.png" alt="Image 1">
       </div>
-      <div class="twoDslide">
+      <div class="twoDslide"> <!-- Second slide discussing a poster design with several variants -->
         <div class="twoDSlide2Text">
           <h7>DMD B.F.A. POSTERS DESIGN</h7>
           <h8>2019</h8>
@@ -419,7 +413,7 @@
         </div>
         <img src="./assets/2DSlide2.png" alt="Image 2">
       </div>
-      <div class="twoDslide">
+      <div class="twoDslide"> <!-- Third slide discussing several posters made in partnership with PursueCare-->
         <div class="twoDSlide3Text1">
           <h7>PURSUECARE POSTERS 
             DESIGN
@@ -447,20 +441,17 @@
       <a class="next" onclick="change2DSlide(1)">&#10095;</a>
     </div>
 
-    <h3>Fine Arts & Photography</h3>
+    <h3>Fine Arts & Photography</h3> <!-- To Add -->
  
 
-    <h1 id="contact">CONTACT</h1>
-    <div class="contactContainer">
+    <h1 id="contact">CONTACT</h1> 
+    <div class="contactContainer"> <!-- Container for Contact information-->
       <div class="cheading"><b>LET'S KEEP IN TOUCH</b></div>
       <div class="email">
         <div class="container-fluid">
           <div class="row ">
-            <div class="col-1">
-              EMAIL
-            </div>
-            <div class="col-1 offset-1">
-              <img src="./assets/Contact/email.png">
+            <div class="col-3">
+              EMAIL <img src="./assets/Contact/email.png">
             </div>
             <div class="col-1 offset-4">
               <button onclick="copyEmail()"><b>Copy</b></button>
@@ -471,31 +462,33 @@
           </div>
         </div>
       </div>
-      <a href="https://www.linkedin.com/"><div class="linkedin">
+      <a href="https://www.linkedin.com/in/shane-rung/"><div class="linkedin">
         <div class="container">
           <div class="row">
-            <div class="col-2">
-              LINKEDIN
-            </div>
-            <div class="col-1">
-              <img src="./assets/Contact/linkedin.png">
+            <div class="col-4">
+              LINKEDIN <img src="./assets/Contact/linkedin.png">
             </div>
           </div>
         </div>
       </div></a>
-      <a href="https://www.instagram.com"><div class="instagram">
+      <a href="https://www.instagram.com/"><div class="instagram">
         <div class="container">
           <div class="row">
-            <div class="col-2">
-              INSTAGRAM
-            </div>
-            <div class="col-1">
-              <img src="./assets/Contact/instagram.png">
+            <div class="col-4">
+              INSTAGRAM    <img src="./assets/Contact/instagram.png">
             </div>
           </div>
         </div>
       </div></a>
-      <a href="#top"><div class="toTop">RETURN TO TOP</div></a>
+      <a href="#top"><div class="toTop">
+        <div class="container">
+          <div class="row">
+            <div class="col-3">
+              RETURN TO TOP
+            </div>
+          </div>
+        </div>
+      </div></a>
     </div>
     <p>
 
