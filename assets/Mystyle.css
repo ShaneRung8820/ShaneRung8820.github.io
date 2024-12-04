@@ -47,7 +47,6 @@
   font-size: clamp(8px, 4vw, 16px);
   text-align: center; /* Centers Text */
   color: #000000;
-
 }
 
 .topnav a:hover { /* Text background changes color when mouse hovers over text */
@@ -259,7 +258,6 @@ p {
   font-size: clamp(16px, 4vw, 24px);  
   font-weight: bold;
   text-align: center; 
-  vertical-align: center;
   padding: 1% 1%;
   /* Adjust position of download button */
   margin-left: 43%;
@@ -342,7 +340,9 @@ p {
 }
 
 @media (max-width: 991px) {
-
+  .image2 b { /* Do not show text below subway image for xs and sm */
+    display: none;
+  }
 }
 
 .image3, .image4, .image5, .image6 { /* Images of Model Sculpts and Creature Design */
@@ -989,7 +989,6 @@ h8 {
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
   cursor: pointer;
-  transition: 0.3s;
   transform: translateY(-50%);
   z-index: 9;
 }
