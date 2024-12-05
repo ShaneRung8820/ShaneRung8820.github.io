@@ -100,11 +100,15 @@ h2, h3 { /* h2 = Subsection Titles, i.e. "Demo Reel" and h3 = Slideshow section 
   margin-bottom: 1%;
   font-weight: normal; /* h2, h3 font-weight defaults to bold, want it to be normal */
   color: var(--heading);
+}
+
+h2 {
   font-size: clamp(30px, 6vw, 55px);
 }
 
 h3 { /* h3 needs slightly more space at the top */
   margin-top: 3%;
+  font-size: clamp(26px, 6vw, 45px);
 }
 
 a {
@@ -185,7 +189,7 @@ p {
 }
 
 .about, .education, .skills, .myself img { /* Adds same border radius to all elements in .bio*/
-  border-radius: 36px;
+  border-radius: 2.5vw;
 }
 
 .education, .skills { /* Adds space between text and border of */
@@ -244,7 +248,7 @@ p {
   margin-right: 10%;
   margin-bottom: -4%; 
   background-color: var(--tan-brown);
-  border-radius: 36px;
+  border-radius: 2.5vw;
 }
 
 .demoreel { /* Adds a little space on all sides of video */
@@ -253,12 +257,12 @@ p {
 
 .demoreel video { 
   width: 100%; /* Ensures video is size of .demoreel */
-  border-radius: 36px;
+  border-radius: 2.5vw;
 }
 
 .experience { /* Settings for green background of each job  */
   background-color: var(--green-grid);
-  border-radius: 10vw; 
+  border-radius: 8vw;
   margin: 2% 10%; /* 2% vertical margin, 10% side margins */
   display: grid; /* Grid of two columns, set size of job title, automatic size of job description */
   grid-template-columns: 35% auto;  
@@ -365,7 +369,7 @@ p {
 /* Add a border to all featured work images and videos */
 .image1 img, .image2 img, .imageFridge img, .image3 img, .image4 img, .image5 img, .image6 img, .video1 video, .video2 video {
   border: 5px solid var(--green-dark);
-  border-radius: 36px;
+  border-radius: 2.5vw;
   width: 100%;
 }
 
@@ -468,7 +472,7 @@ p {
 .video3 video {
   width: 100%;
   border: 10px solid var(--heading);
-  border-radius: 36px;
+  border-radius: 2.5vw;
 }
 
 @media (max-width: 991px) { /* Increases size of some images and videos for small screens */
@@ -519,7 +523,7 @@ p {
 .threeDslide img { /* Basic formatting for all images in 3D Slideshow */
   width: 100%;
   height: auto;
-  border-radius: 36px;
+  border-radius: 2.5vw;
 }
 
 h4, h6 {
@@ -580,7 +584,7 @@ h6 { /* h6 is the year each project was completed during in the 3D Design and An
   position: absolute;
   max-width: 33vw;
   border: 3px solid var(--afterglow);
-  border-radius: 36px;
+  border-radius: 2.5vw;
   right: 5%;
 }
 
@@ -593,7 +597,7 @@ h6 { /* h6 is the year each project was completed during in the 3D Design and An
 }
 
 .SnailAngle img, .SnailFront img, .LightingBed img, .LightingGuitar img, .LightingWindow img, .ThroneClose img, .ThroneFar img { /* Border Radius for all 3D Images */
-  border-radius: 36px;
+  border-radius: 2.5vw;
 }
 
 .SnailRender{ /* Completed Render of Snail's Sandal */
@@ -644,7 +648,7 @@ h6 { /* h6 is the year each project was completed during in the 3D Design and An
 .LightingBed, .LightingGuitar, .LightingWindow {
   position: absolute;
   border: 3px solid var(--afterglow);
-  border-radius: 36px;
+  border-radius: 2.5vw;
 }
 
 .LightingBed {
@@ -694,7 +698,7 @@ h6 { /* h6 is the year each project was completed during in the 3D Design and An
 .ThroneFar, .ThroneClose {
   position: absolute;
   border: 3px solid var(--afterglow);
-  border-radius: 36px;
+  border-radius: 2.5vw;
 }
 
 .ThroneClose {
@@ -733,7 +737,9 @@ h6 { /* h6 is the year each project was completed during in the 3D Design and An
 .threeDSlide4Video1, .threeDSlide4Video2 {
   display: table-cell; 
   max-width: 30vw; 
+  margin-top: 3%; 
   margin-right: 5%;
+  border-radius: 2.5vw;
 }
 
 .threeDSlide4Video1 {
@@ -742,6 +748,10 @@ h6 { /* h6 is the year each project was completed during in the 3D Design and An
 
 .threeDSlide4Video2 {
   grid-area: 2 / 2 / 2 / 3;
+}
+
+.threeDSlide4Video1 video, .threeDSlide4Video2 video {
+  border-radius: 2.5vw;
 }
 
 .threeDSlide4Video1 p, .threeDSlide4Video2 p {
@@ -773,7 +783,7 @@ h5 {
 .twoDslide img {
   width: 100%;
   height: auto;
-  border-radius: 15px;
+  border-radius: 2.5vw;
 }
 
 h7 {
@@ -825,18 +835,18 @@ h8 {
 .DogLaneBag, .DogLaneMiniBags, .DogLaneCup, .DogLaneMerch {
   max-width: 15vw;
   border: 2px solid var(--heading);
-  border-radius: 36px;
+  border-radius: 2.5vw;
   bottom: 5%;
 }
 
 .DogLaneBag img, .DogLaneMiniBags img, .DogLaneCup img, .DogLaneDesign img, .DogLaneMerch img, .DMDSketch img, .DMDGreen img, .DMDBlue img, .DMDOrange img, .DMDAnimated img, .PosterBlack img, .PosterGray img, .PosterTopText img, .PosterSideText img {
-  border-radius: 35px;
+  border-radius: 2.4vw;
 }
 
 .DogLaneDesign {
   max-width: 10vw;
   border: 2px solid var(--heading);
-  border-radius: 36px;
+  border-radius: 2.4vw;
   right: 10%;
   bottom: 42%;
 }
@@ -942,7 +952,7 @@ h8 {
   max-width: 13vw; 
   bottom: 5%;
   border: 2px solid var(--heading);
-  border-radius: 36px;
+  border-radius: 2.5vw;
 }
 
 .DMDSketch {
@@ -1010,7 +1020,7 @@ h8 {
   position: absolute;
   max-width: 16vw;
   border: 2px solid var(--heading);
-  border-radius: 36px;
+  border-radius: 2.5vw;
 }
 
 .PosterBlack {
@@ -1068,7 +1078,7 @@ h8 {
   margin-right: 10%;
   margin-top: 3%; 
   padding-bottom: 5.5%;  
-  border-radius: 36px; 
+  border-radius: 2.5vw; 
 }
 
 .cheading {
@@ -1117,7 +1127,7 @@ h8 {
   font-family: 'futura-pt';
   font-size: 1.5vw;
   color: var(--afterglow);
-  border-radius: 36px; 
+  border-radius: 2.5vw; 
   padding-left: 40%;
   padding-right: 40%; 
 }
