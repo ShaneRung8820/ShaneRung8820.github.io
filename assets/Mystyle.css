@@ -9,48 +9,76 @@
   --heading:#4A4422;
   --tan-brown: #d5c09b;
   --pastel-brown: #b49479;
-  font-family: 'futura-pt'; /* Futura-pt is imported in index.html */
   font-size: 1vw; /* Default font size for whenever it is not specified */
+}
+
+* {
+  font-family: 'futura-pt'; /* Futura-pt is imported in index.html */
 }
 
 .topnav {
   /* Add a background color to the top navigation */
   background-color: var(--afterglow);
-  /* Force global navigation bar to stick at top of page */
-  position: fixed;
-  /* Stretch across width of entire page*/
+}
+
+.navbar-brand-image { 
+  margin-left: 10%;
+  max-width: 90px; 
+}
+
+.collapse {
+  margin-right: 10%;
+}
+
+.navbar-brand-image img {
   width: 100%;
-  /* Force topnav to render above every element in the page */
-  z-index: 10; 
 }
 
-.navImage { /* Reduce size of image logo in the Navigation bar */
-  width: 100px; 
+.navbar-brand-text {
+  margin-top: 1%;
+  margin-left: -1%; 
 }
 
-.topnav p { /* Formatting for the text logo in the navigation bar */
-  margin-top: 10%;
-  margin-left: -20%;
+.navbar-brand-text p { /* Formatting for the text logo in the navigation bar */
   color: var(--heading); /* Sets color to the --heading variable defined in :root */
-  line-height: 20px;
+  line-height: 28px; 
+  font-size: clamp(20px, 6.5vw, 36px); 
 }
 
-.topnav a { /* Style the links inside the navigation bar */
-  display:inline-block; /* Does not add a new-line afterwards */
-  background-color: var(--green-light);
-  font-weight: bold; 
-  /* Make text borders rounded, create extra space between each bubble and edges of header. Padding to make bubble extend to left and right of text */
+.nav-link { /* Style the links inside the navigation bar */
+  background-color: var(--green-light); 
+  /* Make text borders rounded */
   border-radius: 2vw; 
-  margin-top: 25%;  
-  padding: clamp(4px, 4vw, 8px); 
+  padding-left: 10px;
+  padding-right: 10px;
   /* Font formatting */
-  font-size: clamp(8px, 4vw, 16px);
+  font-size: 20px; 
   text-align: center; /* Centers Text */
   color: #000000;
 }
 
-.topnav a:hover { /* Text background changes color when mouse hovers over text */
+.nav-link:hover { /* Text background changes color when mouse hovers over text */
   background-color: var(--pale);
+}
+
+.navbar-toggler { 
+  margin-right: 10%;
+  border: 0px;
+}
+
+.navbar-toggler-icon {
+  background-size: 100%;
+  padding: 20px; 
+}
+
+@media (max-width: 991px) { 
+  .collapse {
+    margin-left: 10%;
+  }
+  .nav-item {
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
 }
 
 body {
@@ -60,6 +88,7 @@ body {
 }
 
 h1 { /* Section Titles, i.e. "Meet Shane" and "Portfolio" */
+  font-weight: bold;
   margin-left: 10%;
   color: var(--heading);
   font-size: clamp(36px, 6vw, 80px);
@@ -139,7 +168,7 @@ p {
 @media (min-width: 992px) { /* Adjusts spacing of right column of .bio so that it is aligned with .myself. Not necessary when smaller than md breakpoint */
   .rightCol {
     margin-top: -2%;
-  }
+  } 
   .myself img {
     height: 100%;
   }
@@ -162,8 +191,14 @@ p {
 .education, .skills { /* Adds space between text and border of */
   padding-left: 5%;
   padding-right: 5%;
-  padding-top: 2.5%;
+  padding-top: 8%;  
   height: 100%;
+}
+
+@media (min-width: 992px) {
+  .education, .skills {
+    padding-top: 3%; 
+  }
 }
 
 .education { /* Education background color */
@@ -190,7 +225,7 @@ p {
 }
 
 .about p, .education p, .skills p { /* Normal text formatting for three sections */
-  font-size: 18px;
+  font-size: clamp(16px, 4vw, 20px);
 }
 
 .education p { /* Education paragraph spacing */
@@ -226,33 +261,51 @@ p {
   border-radius: 10vw; 
   margin: 2% 10%; /* 2% vertical margin, 10% side margins */
   display: grid; /* Grid of two columns, set size of job title, automatic size of job description */
-  grid-template-columns: 38% auto; 
+  grid-template-columns: 35% auto;  
 }
 
 .jobh { /* Employer name, Job Title, Duration */
   /* Slight top and left padding to keep it within the background */
-  margin-top: 4%; 
-  margin-bottom: 2.5%;
-  padding-left: 15%;
+  padding: 10% 5%;
   display: table-cell /* Necessary since using grid format */
 }
 
-.jobh p { /* Increase size of job title font */
+.jobh h1, .jobh h2, .jobh h3 { /* Increase size of job title font */
   font-size: clamp(16px, 4vw, 28px);
+  color: black;
+  padding-bottom: 3%;
+  line-height: -.3em; 
+  padding-right: 4%;
 }
 
 .jobd { /* Job description formatting */
-  padding-top: 2%; /* Slight top and right padding to keep it within the background */
-  padding-right: 5%; 
+  padding: 10% 5%; 
   margin: auto 0%;
   font-size: clamp(16px, 4vw, 24px);
   display: table-cell
 }
 
+@media (min-width: 992px) {
+  .jobh {
+    padding-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  .jobd {
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+  .jobh h1, .jobh h2, .jobh h3 {
+    padding-bottom: 1%;
+  }
+}
+
 .download { /* Download Resume Button */
   /* Adjust background color and edge size */
   background-color: var(--green-grid);
-  border-radius: 40px;
+  border-radius: 5vw; 
   /* Adjust text format */
   color: var(--heading);
   font-size: clamp(16px, 4vw, 24px);  
@@ -260,8 +313,8 @@ p {
   text-align: center; 
   padding: 1% 1%;
   /* Adjust position of download button */
-  margin-left: 43%;
-  margin-right: 43%;
+  margin-left: 40%; 
+  margin-right: 40%;
 }
 
 .download:hover { /* Button changes color when hovering over */
@@ -339,12 +392,6 @@ p {
   }
 }
 
-@media (max-width: 991px) {
-  .image2 b { /* Do not show text below subway image for xs and sm */
-    display: none;
-  }
-}
-
 .image3, .image4, .image5, .image6 { /* Images of Model Sculpts and Creature Design */
   margin-top: 14%;  
   margin-bottom: 2%;
@@ -353,30 +400,31 @@ p {
   max-width: 30vw;  
 } 
 
-.image4 {
-  transform: translateX(-6%);
-}
-
-.image5 {
-  transform: translateX(-12%);
-}
-
-.image6{
-  transform: translateX(-18%); 
+@media (min-width: 992px) {
+  .image4 {
+    transform: translateX(-8%);
+  }
+  
+  .image5 {
+    transform: translateX(-16%);
+  }
+  
+  .image6{
+    transform: translateX(-23%);  
+  }
+  .ftext2 {
+    padding-left: 10.5%;
+  }
+  
+  .ftext3 {
+    padding-right: 8%;
+  }
 }
 
 .ftext2, .ftext3 {
   margin-bottom: 0%;
   text-align: center;
   font-size: clamp(16px, 4vw, 19px);  
-}
-
-.ftext2 {
-  padding-left: 10.5%;
-}
-
-.ftext3 {
-  padding-right: 13%; 
 }
 
 .video1, .video2 { /* Model Rotation Videos */
@@ -429,6 +477,13 @@ p {
     margin-right: 0%;
   }
 
+  .image3, .image5 {
+    transform: translateX(-10%);
+  }
+  .image4, .image6 { /* Images of Model Sculpts and Creature Design */
+    transform: translateX(-10%); 
+  } 
+
   .video1 {
     transform: translateX(0%);
   }
@@ -437,7 +492,8 @@ p {
   }
 
   .video3 {
-    max-width: 65vw;
+    max-width: 73.3vw;
+    margin-left: 0%;
   }
 
   .video3 video {
@@ -761,9 +817,9 @@ h8 {
   position: absolute;
 }
 
-.twoDslide1container .container {
-  margin-left: 6%;
-  margin-right: 5%;
+.twoDslide1container {
+  margin-left: 5%;
+  margin-right: 3.5%;   
 }
 
 .DogLaneBag, .DogLaneMiniBags, .DogLaneCup, .DogLaneMerch {
@@ -867,8 +923,8 @@ h8 {
 }
 
 .MockupLabel {
-  right: 34.1vw; 
-  top: 62%; 
+  right: 35vw;
+  top: 66%;
 }
 
 /* Second Slide of 2D Graphic Design */

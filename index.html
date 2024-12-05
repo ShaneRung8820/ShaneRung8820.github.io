@@ -7,35 +7,33 @@
   </header>
   <body>
     <!-- Top Navigation Bar -->
-    <div class="topnav"> 
-      <div class="container-fluid mx-auto">
-        <div class="row row-eq-height"> <!-- All columns in row are equal height -->
-          <div class="col-1 offset-1"> <!-- Column sticks to the left, empty space in first column -->
-            <img src="./assets/Logo-removebg-preview.png" alt="Line Art Outline of Shane Rungkagoonnuwat" class="navImage">
-          </div>
-          <div class="col-2 offset-xs-1 offset-sm-1 offset-lg-0"> <!-- Shift column right when screen size is small to prevent overlap with image -->
-            <p><b>SHANE RUNG 
-              DESIGN</b></p> 
-          </div>
-          <!-- Space out navigation link columns equally along the right edge of the screen -->
-          <div class="col-1 offset-lg-2 d-flex flex-column justify-content-between">
-            <a href="#about">About</a>
-          </div>
-          <div class="col-1 d-flex flex-column justify-content-between">
-            <a href='#experience'>Experience</a>
-          </div>
-          <div class="col-1 d-flex flex-column justify-content-between">
-            <a href="#featured">Featured</a>
-          </div>
-          <div class="col-1 d-flex flex-column justify-content-between">
-            <a href="#portfolio">Portfolio</a>
-          </div>
-          <div class="col-1 d-flex flex-column justify-content-between">
-            <a href="#contact">Contact</a>
-          </div>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top justify-content-start topnav">  
+      <a class="navbar-brand navbar-brand-image" href="#"><img src="./assets/Logo-removebg-preview.png" alt="Line Art Outline of Shane Rungkagoonnuwat"></a>
+      <a class="navbar-brand navbar-brand-text" href="#"><p><b>SHANE RUNG 
+        DESIGN</b></p></a>
+      <button class="navbar-toggler px-3 py-3 ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span> 
+      </button> 
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav"> 
+          <li class="nav-item active px-3"> 
+            <a class="nav-link active px-3" href="#about">About</a>
+          </li>
+          <li class="nav-item active px-3">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item active px-3">
+            <a class="nav-link" href="#featured">Featured</a>
+          </li>
+          <li class="nav-item active px-3">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item active px-3"> 
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
       </div>
-    </div>
+    </nav>
     <!-- Snail background image and Text Logo-->
     <div class="landingpage"> 
       <img src="assets/SnailSandal.jpg" alt="Snail Sandal" class="snail" id="top"> <!-- Background when first opening the page -->
@@ -75,7 +73,6 @@
                     <b>McGill University </b>
                     M.A. <i>Master of Information Studies, UX Design</i>
                     
-
                   </p>
                 </div>
               </div>
@@ -111,10 +108,9 @@
 
     <div class="experience"> <!-- Box for the job/experience -->
       <div class="jobh"> <!-- Formatting for employer, title, and duration. Left column -->
-        <p><b>McGill University</b>
-          <i>Alumni Engagement Specialist </i>
-          Sep - Dec 2023
-        </p>
+        <h1><b>McGill University</b></h1>
+        <h2><i>Alumni Engagement Specialist </i></h2>
+        <h3>Sep - Dec 2023</h3>
       </div>
       <div class="jobd"> <!-- Formatting for description. Right column -->
         <p>Leveraged interpersonal and sales skills to secure funding for McGill initiatives through targeted cold calling, resolving alumni concerns with a solution-focused approach to enhance donor experience.</p>
@@ -123,10 +119,9 @@
 
     <div class="experience">
       <div class="jobh">
-        <p><b>University of Connecticut</b>
-          <i>Student Recruitment Specialist </i>
-          Apr 2022 - May 2023
-        </p>
+        <h1><b>University of Connecticut</b></h1>
+        <h2><i>Student Recruitment Specialist </i></h2>
+        <h3>Apr 2022 - May 2023</h3>
       </div>
       <div class="jobd">
         <p>Administer daily campus tours, greet and check in guests, and manage reception to welcome visitors. Collaborate with admission counselors to provide information on admission procedures or direct visitors to appropriate offices.
@@ -136,10 +131,9 @@
 
     <div class="experience">
       <div class="jobh">
-        <p><b>PursueCare</b>
-          <i>Digital Branding Strategist</i>
-          Aug - Dec 2022
-        </p>
+        <h1><b>PursueCare</b></h1>
+        <h2><i>Digital Branding Strategist</i></h2>
+        <h3>Aug - Dec 2022</h3>
       </div>
       <div class="jobd">
         <p>Collaborated with PursueCare through UConn's Digital Media and Design Agency course to create promotional content for college demographics. Designed promotional posters using Photoshop and Illustrator, ensuring consistent branding and high-quality standards.</p>
@@ -148,10 +142,9 @@
 
     <div class="experience">
       <div class="jobh">
-        <p><b>University of Connecticut</b>
-          <i>Student Orientation Assistant</i>
-          Aug 2021
-        </p>
+        <h1><b>University of Connecticut</b></h1>
+        <h2><i>Student Orientation Assistant</i></h2>
+        <h3>Aug 2021</h3>
       </div>
       <div class="jobd">
         <p>Facilitated orientation for international students at the University of Connecticut by leading ice-breakers, giving campus tours, assisting with presentations, and providing guidance to ease their transition and adjustment to a new environment.</p>
@@ -160,17 +153,18 @@
 
     <div class="experience">
       <div class="jobh">
-        <p><b>Uphoria Intertrade</b>
-          <i>Packaging & Marketing Designer</i>
-          June 2020 - Aug 2021
-        </p>
+        <h1><b>Uphoria Intertrade</b></h1>
+        <h2><i>Packaging & Marketing Designer</i></h2>
+        <h3>June 2020 - Aug 2021</h3>
       </div>
       <div class="jobd">
-        <p>Designed packaging for the brand’s surgical masks, managed social media to attract new customers, and handled purchase orders for web, e-commerce, and wholesale operations.</p>
+        <p>Designed packaging for the brand’s surgical masks, managed social media to attract new customers, and handled purchase orders for web, e-commerce, and wholesale operations.
+          
+        </p>
       </div>
     </div>
     <!-- Links to Resume hosted on Google Drive -->
-    <a href="https://drive.google.com/file/d/1zewcW0dywYCPiVSgabC63AdECtQl5o72/view"><div class="download">View Resume</div></a>
+    <a href="https://drive.google.com/file/d/1zewcW0dywYCPiVSgabC63AdECtQl5o72/view" target="_blank"><div class="download">View Resume</div></a>
     <!-- Featured Video -->
     <h1 id="featured">FEATURED WORK</h1>
     <div class="featuredcontainer">
@@ -209,34 +203,44 @@
               </div>
             </div>
           </div>
-          <div class="row row-eq-height"> 
-          <div class="col-3"> 
-              <div class="image3">
-                <img src="./assets/CreatureFront.png" alt="The Front of the Creature Model." class="img-fluid">
+          <div class="row"> 
+            <div class="col-xs-12 col-sm-12 col-lg-6">
+              <div class="row">
+                <div class="col-6">
+                  <div class="image3">
+                    <img src="./assets/CreatureFront.png" alt="The Front of the Creature Model." class="img-fluid">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="image4">
+                    <img src="./assets/CreatureSide.png" alt="The Side of the Creature Model." class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 pl-2">
+                  <div class="ftext2"><b>Model sculpted in Pligway’s 3D Coat</b></div>
+                </div>
               </div>
             </div>
-            <div class="col-3">
-              <div class="image4">
-                <img src="./assets/CreatureSide.png" alt="The Side of the Creature Model." class="img-fluid">
+            <div class="col-xs-12 col-sm-12 col-lg-6">
+              <div class="row">
+                <div class="col-6">
+                  <div class="image5">
+                    <img src="./assets/Creature5.JPG" alt="Front of the Small Creature Model" class="img-fluid">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="image6">
+                    <img src="./assets/Creature6.JPG" alt="Side of the Small Creature Model" class="img-fluid">
+                  </div>
+                </div>
               </div>
-            </div>
-            <div class="col-3">
-              <div class="image5">
-                <img src="./assets/Creature5.JPG" alt="Front of the Small Creature Model" class="img-fluid">
+              <div class="row">
+                <div class="col-12">
+                  <div class="ftext3"><b>Model of the Small Creature</b></div>
+                </div>
               </div>
-            </div> 
-            <div class="col-3">
-              <div class="image6">
-                <img src="./assets/Creature6.JPG" alt="Side of the Small Creature Model" class="img-fluid">
-              </div>
-            </div> 
-          </div>
-          <div class="row">
-            <div class="col-4 offset-1 pl-2">
-              <div class="ftext2"><b>Model sculpted in Pligway’s 3D Coat</b></div>
-            </div>
-            <div class="col-4 offset-2 pl-2">
-              <div class="ftext3"><b>Model of the Small Creature</b></div>
             </div>
           </div>
           <div class="row">
@@ -460,7 +464,7 @@
           </div>
         </div>
       </div>
-      <a href="https://www.linkedin.com/in/shane-rung/"><div class="linkedin">
+      <a href="https://www.linkedin.com/in/shane-rung/" target="_blank"><div class="linkedin">
         <div class="container">
           <div class="row">
             <div class="col-4">
@@ -469,7 +473,7 @@
           </div>
         </div>
       </div></a>
-      <a href="https://www.instagram.com/"><div class="instagram">
+      <a href="https://www.instagram.com/" target="_blank"><div class="instagram">
         <div class="container">
           <div class="row">
             <div class="col-4">
@@ -491,7 +495,8 @@
     <p>
 
 
-    </p>
+    </p> 
     <script src="./assets/script.js"></script> <!-- Javascript file with code for slideshow and copying email -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> <!-- Imports bootstrap dependencies, necessary for the navbar--> 
   </body>
 </html>
