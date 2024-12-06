@@ -8,7 +8,7 @@ function change3DSlide(n) {
 }
 // Displays slide n. The number each slide is given is determined by the order they appear in the HTML file
 function show3DSlide(n) {
-  const slides = document.querySelectorAll('.threeDslide');
+  const slides = document.querySelectorAll('.slide3D');
   if (n >= slides.length) {
     current3DSlide = 0;
   }
@@ -28,7 +28,7 @@ function change2DSlide(n) {
 
 // Displays slide n. The number each slide is given is determined by the order they appear in the HTML file
 function show2DSlide(n) {
-    const slides = document.querySelectorAll('.twoDslide');
+    const slides = document.querySelectorAll('.slide2D'); 
     if (n >= slides.length) {
         current2DSlide = 0;
     }
@@ -46,7 +46,7 @@ function changeFineArtSlide(n) {
 }
 // Displays slide n. The number each slide is given is determined by the order they appear in the HTML file
 function showFineArtSlide(n) {
-  const slides = document.querySelectorAll('.fineArtsslide');
+  const slides = document.querySelectorAll('.slideFineArts');
   if (n >= slides.length) {
     currentFineArtSlide = 0;
   }
