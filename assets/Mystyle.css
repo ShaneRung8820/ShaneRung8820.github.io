@@ -271,10 +271,19 @@ p {
   }
   .skills {
     margin-top: 7%;
+    padding: 2%;
   }
   .education {
-    margin-top: 12%;  
+    margin-top: 12%;
+    padding: 2%;
   }
+  .subheading {
+    padding-top: 2%;
+    padding-bottom: 1%;
+  }
+  .education p, .skills p {
+    padding: 2%;
+  } 
 }
 
 .demoreelcontainer { /* Formatting for brown border around video */
@@ -312,11 +321,24 @@ p {
 }
 
 .jobh h1, .jobh h2, .jobh h3 {
-  padding-bottom: 1%;
+  padding-bottom: 2%;
 }
 
 .jobh h2, .jobh h3 {
-  padding-top: 1%;
+  padding-top: 2%;
+}
+
+.jobh h3 {
+  margin-top: 0%;
+}
+
+@media (min-width: 992px) {
+  .jobh h1, .jobh h2, .jobh h3 {
+    padding-bottom: 1.2%;
+  }
+  .jobh h2, .jobh h3 {
+    padding-top: 1.2%; 
+  }
 }
 
 .jobd { /* Job description formatting */ 
@@ -405,7 +427,7 @@ p {
 /* Add a border to all featured work images and videos */
 .image1 img, .image2 img, .imageFridge img, .image3 img, .image4 img, .image5 img, .image6 img, .video1 video, .video2 video {
   border: 5px solid var(--green-dark);
-  border-radius: 1.8vw;
+  border-radius: 1.3vw;
   width: 100%;
 }
 
@@ -508,7 +530,7 @@ p {
 .video3 video {
   width: 100%;
   border: 10px solid var(--heading);
-  border-radius: 1.8vw;
+  border-radius: 1.3vw;
 }
 
 @media (max-width: 991px) { /* Increases size of some images and videos for small screens */
@@ -554,17 +576,18 @@ p {
   position: relative;
   margin-left: 10%;
   margin-right: 10%;
-  cursor: pointer;
 }
 
-.threeDslide { /* By default, do not display it. The javascript code will update this for one of the slides at a time. */
+.threeDslide, .twoDslide, .fineArtsslide { /* By default, do not display it. The javascript code will update this for one of the slides at a time. */
   display: none;
+  height: auto;  
 }
 
-.threeDslide img { /* Basic formatting for all images in 3D Slideshow */
+.threeDslide img, .twoDslide img, .fineArtsslide img { /* Basic formatting for all images in 3D Slideshow */
   width: 100%;
-  height: auto;
-  border-radius: 1.8vw;
+  height: 100%; 
+  border-radius: 1.3vw;
+  object-fit: cover;
 }
 
 .threeDslide h2, .threeDslide h3 {
@@ -578,76 +601,58 @@ p {
 }
 
 .threeDslide h2 {
-  font-size: 2.2em; 
+  font-size: 48px;  
   margin-bottom: 0%;
   margin-top: 10%;
 }
 
 .threeDslide h3 {
-  font-size: 1.8em; 
+  font-size: 30px;  
   margin-top: 0%;
   margin-bottom: 10%;
   padding: 0%;
 }
 
+.threeDslide .container-fluid, .twoDslide .container-fluid, .fineArtsslide .container-fluid, .fineArtsslide .container {
+  position: absolute;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  margin-bottom: 5%; 
+  
+}
 /* First slide of 3D Design and Animation Slideshow */
 .threeDslide1Text { /* Contains Name of the Project, Year it was Completed, and the description */
   text-align: center;
-  position: absolute;
-  margin-left: 5%;
-  margin-right: 50%;
+  margin-bottom: 5%;
+  padding-top: 5%;
+}
+
+.threeDslide1 {
+  padding-top:15%;
+  padding-bottom: 5%;
+  margin-top: 5%;
 }
 
 .threeDslide1Text p { /* Formatting for the description part of 3D Slide 1 */
-  font-size: 1.1em;
+  font-size: 20px;
   color: var(--heading);
-  margin-top: -5%;
 }
 
 .InitialLabel, .FinalLabel, .ThroneLabel { /* Formatting shared for all three labels */
-  font-size: 1.2em;
+  font-size: clamp(16px, 2.5vw, 24px);
   text-align: center;
-  position: absolute;
   color: var(--afterglow);
   text-decoration: underline;
 }
 
-.InitialLabel { /* Label for Initial Sketch */
-  left: 10%;
-  top: 53%; 
-}
-
-.FinalLabel { /* Label for Final Sketch */
-  left: 32%; 
-  top: 53%;
-}
-
 .SnailAngle, .SnailFront { /* Two images of Snail's Sandal */
-  position: absolute;
-  max-width: 33vw;
   border: 3px solid var(--afterglow);
-  border-radius: 1.8vw;
-  right: 5%;
-}
-
-.SnailAngle { 
-  top: 5%; 
-}
-
-.SnailFront {
-  bottom: 5%;
-}
-
-.SnailAngle img, .SnailFront img, .LightingBed img, .LightingGuitar img, .LightingWindow img, .ThroneClose img, .ThroneFar img { /* Border Radius for all 3D Images */
-  border-radius: 1.8vw;
+  border-radius: 1.3vw;
 }
 
 .SnailRender{ /* Completed Render of Snail's Sandal */
-  position: absolute;
-  max-width: 27vw;
-  bottom: 5%;
-  left: 21%;
-  transform: scaleX(-1);
+  transform: scaleX(-1.2);
 }
 
 .SnailRender img {
@@ -656,115 +661,52 @@ p {
 }
 
 .SnailSketch {
-  position: absolute;
-  max-width: 22vw;
-  bottom: 1%;
-  left: 2%;
   transform: rotate(10deg)
-}
-/* 3D Design and Animation Slide 1 FullScreen Formatting */
-.threeDslide:fullscreen .threeDslide1Text h2 {
-  padding-top: 5%;
-}
-
-.threeDslide:fullscreen .InitialLabel, .threeDslide:fullscreen .ThroneLabel, .threeDslide:fullscreen .ThroneLabel {
-  font-size: clamp(20px, 4vw, 24px);
-}
-
-.threeDslide:fullscreen .SnailAngle, .threeDslide:fullscreen .SnailFront {
-  max-width: none;
-  width: 40vw;
-}
-
-.threeDslide:fullscreen .SnailAngle {
-  top: 7%;
-}
-
-.threeDslide:fullscreen .SnailFront {
-  bottom: 7%;
-}
-
-.threeDslide:fullscreen .SnailRender { 
-  max-width: 35vw; 
-  bottom: 7%
-}
-
-.threeDslide:fullscreen .SnailSketch {
-  max-width: 27vw; 
-  bottom: 5%;
 }
 /* Second slide of 3D Design and Animation Slideshow */
 .threeDslide2Text {
   text-align: center;
-  position: absolute;
-  margin-left: 63%;
-  margin-right: 5%;
+}
+
+.slide3D2 {
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+
 }
 
 .threeDslide2Text p {
-  font-size: 1.1em;
+  font-size: clamp(16px, 2vw, 20px);  
   color: var(--heading);
 }
 
 .threeDslide2Text h2 {
   padding-top: 5%; 
-  font-size: 2.0em;
 }
 
 .threeDslide2Text h3 {
   margin-bottom: 3%;
 }
 
-.LightingBed, .LightingGuitar, .LightingWindow {
-  position: absolute;
+.LightingBed img, .LightingGuitar img, .LightingWindow img {
   border: 3px solid var(--afterglow);
-  border-radius: 1.8vw;
+  border-radius: 1.3vw; 
+  object-fit: cover;
 }
 
-.LightingBed {
-  max-width: 45vw;
-  left: 4%;
-  top: 7%;
-}
-
-.LightingGuitar {
-  max-width: 29vw;
-  bottom: 6%;
-  left: 17%;
-}
-
-.LightingWindow {
-  max-width: 29vw;
-  bottom: 5%;
-  right: 5%;
-}
-/* Second Slide of 3D Design and Animation Fullscreen Formatting */
-.threeDslide:fullscreen .threeDslide2Text h2 {
-  padding-top: 5%;
-}
-
-.threeDslide:fullscreen .LightingBed {
-  max-width: 55vw;
-}
-
-.threeDslide:fullscreen .LightingGuitar {
-  max-width: 39vw;  
-  left: 12%;
-}
-
-.threeDslide:fullscreen .LightingWindow {
-  max-width: 39vw; 
+@media (max-width: 991px) {
+  @media (min-width: 889px) {
+    .LightingBed img {
+      width: 55vw;
+    }
+  }
 }
 /* Third slide of 3D Design and Animation Slideshow */
 .threeDSlide3Text {
   text-align: center;
-  position: absolute;
-  margin-left: 5%;
-  margin-right: 55%; 
 }
 
 .threeDSLide3Text p {
-  font-size: 1.2em;
+  font-size: clamp(19px, 2.5vw, 28px);
   color: var(--heading);
 }
 
@@ -776,56 +718,24 @@ p {
   margin-bottom: 6%;
 }
 
-.ThroneLabel {
-  left: 22%;  
-  top: 50%;
-}
-
-.ThroneSketch {
-  position: absolute;
-  max-width: 37vw;
-  bottom: 3%;
-  left: 3%;
-}
-
 .ThroneFar, .ThroneClose {
-  position: absolute;
   border: 3px solid var(--afterglow);
-  border-radius: 1.8vw;
-  max-width: 32vw;
-  right: 5%;
+  border-radius: 1.3vw;
 }
 
-.ThroneClose {
-  bottom: 6%;
+.ThroneFar img, .ThroneClose img, .ThroneSketch img {
+  width: 100%;
+  object-fit: cover;
+  object-position: 80% 50%;   
 }
-
-.ThroneFar {
-  top: 6%;
+@media (max-width: 991px) {
+  .ThroneFar, .ThroneClose {
+    max-width: 40vw; 
+  }
+  .ThroneSketch {
+    max-width: 50vw; 
+  }
 }
-/* Third slide of 3D Design and Animation Fullscreen formatting */
-.threeDslide:fullscreen .threeDslide3Text h2 {
-  padding-top: 2.5%; 
-}
-
-.threeDslide:fullscreen .ThroneSketch {
-  max-width: 47vw; 
-  bottom: 5%;
-  left: 3%;
-}
-
-.threeDslide:fullscreen .ThroneFar, .threeDslide:fullscreen .ThroneClose {
-  max-width: 40vw;
-}
-
-.threeDslide:fullscreen .ThroneFar {
-  top: 7%;
-}
-
-.threeDslide:fullscreen .ThroneClose {
-  bottom: 7%;
-}
-
 /* Fourth slide of the 3D Design and Animation Slideshow */
 .threeDSlide4Text {
   position: absolute;
@@ -850,7 +760,7 @@ p {
   max-width: 30vw; 
   margin-top: 3%; 
   margin-right: 5%;
-  border-radius: 1.8vw;
+  border-radius: 1.3vw;
 }
 
 .threeDSlide4Video1 {
@@ -864,14 +774,13 @@ p {
 }
 
 .threeDSlide4Video1 video, .threeDSlide4Video2 video {
-  border-radius: 1.8vw;
   width: 100%;
   border: 2px solid var(--afterglow);
-  border-radius: 1.8vw;
+  border-radius: 1.3vw;
 }
 
 .threeDslide4Text p, .threeDSlide4Video1 p, .threeDSlide4Video2 p {
-  font-size: 1.2em;
+  font-size: clamp(16px, 3vw, 24px);
   color: var(--heading);
   line-height: 1em;
 }
@@ -881,7 +790,7 @@ p {
 }
 
 h4 {
-  font-size: 1.4em;
+  font-size: clamp(24px, 3vw, 30px);
   font-weight: normal;
   line-height: 1em;
   margin: 0px 0px 10px 0px;
@@ -891,43 +800,23 @@ h4 {
 .threeDslide4Text, .threeDSlide4Video1 p, .threeDSlide4Video2 p, h4 {
   text-align: center;
 } 
-/* Fourth 3D Graphic Design and Animation Fullscreen Formatting */
-.threeDslide:fullscreen h4 {
-  font-size: clamp(24px, 4vw, 30px);
-}
-
-.threeDslide:fullscreen .threeDSlide4Video1, .threeDslide:fullscreen .threeDSlide4Video2 {
-  top: 32%;
-  max-width: 40vw; 
-}
-
 /* Start of 2D Graphic Design Slides */
-.twoDslide {
-  display: none;
-}
-
-.twoDslide img {
-  width: 100%;
-  height: auto;
-  border-radius: 1.8vw;
-}
-
-.twoDslide h2 {
+.twoDslide h2, .fineArtsslide h2 {
   color: white;
   white-space: pre-line;
   font-weight: bold;
-  font-size: 2em; 
+  font-size: 36px; 
   width: 100%;
   line-height: 1em;
   margin: 0%;
   padding-bottom: 0%;
 }
 
-.twoDslide h3 {
+.twoDslide h3, .fineArtsslide h3 {
   color: white;
   white-space: pre-line;
   font-style: italic;
-  font-size: 1.1em; 
+  font-size: 20px; 
   width: 100%;
   line-height: 1em;
   margin: 0%;
@@ -972,18 +861,18 @@ h4 {
 .DogLaneBag, .DogLaneMiniBags, .DogLaneCup, .DogLaneMerch {
   max-width: 15vw;
   border: 4px solid var(--heading);
-  border-radius: 1.9vw;
+  border-radius: 1.3vw;
   bottom: 5%;
 }
 
 .DogLaneBag img, .DogLaneMiniBags img, .DogLaneCup img, .DogLaneDesign img, .DogLaneMerch img, .DMDSketch img, .DMDGreen img, .DMDBlue img, .DMDOrange img, .DMDAnimated img, .PosterBlack img, .PosterGray img, .PosterTopText img, .PosterSideText img {
-  border-radius: 1.8vw;
+  border-radius: 1.3vw;
 }
 
 .DogLaneDesign {
   max-width: 10vw;
   border: 4px solid var(--heading);
-  border-radius: 1.9vw;
+  border-radius: 1.3vw;
   right: 10%;
   bottom: 42%;
 }
@@ -1051,7 +940,6 @@ h4 {
 .LogoDesignLabel {
   right: 25%;
   top: 5%;
-
 }
 
 .ColorPaletteLabel {
@@ -1078,38 +966,6 @@ h4 {
   right: 43%;
   top: 66%;
 }
-/* First Slide of 2D Graphic Design Fullscreen Formatting */
-.twoDslide:fullscreen .twoDSlide1Text1 {
-  margin-top: 7.5%;
-}
-.twoDslide:fullscreen .DogLaneBag, .twoDslide:fullscreen .DogLaneMiniBags, .twoDslide:fullscreen .DogLaneCup, .twoDslide:fullscreen .DogLaneMerch {
-  max-width: 19.5vw;
-} 
-.twoDslide:fullscreen .DogLaneDesign {
-  max-width: 13vw;  
-}
-.twoDslide:fullscreen .DogLaneLogo {
-  max-width: 27.5vw;
-}
-.twoDslide:fullscreen .LogoDesignLabel, .twoDslide:fullscreen .ColorPaletteLabel, .twoDslide:fullscreen .hexcode1, .twoDslide:fullscreen .hexcode2, .twoDslide:fullscreen .hexcode3, .twoDslide:fullscreen .MockupLabel, .twoDslide:fullscreen .PosterLabel, .twoDslide:fullscreen .DMDSketchLabel, .twoDslide:fullscreen .DMDVariantsLabel, .twoDslide:fullscreen .DMDAnimatedLabel {
-  font-size: clamp(16px, 4vw, 24px);
-}
-.twoDslide:fullscreen .dot1, .twoDslide:fullscreen .dot2, .twoDslide:fullscreen .dot3 {
-  height: 5vw;
-  width: 5vw;
-}
-.twoDslide:fullscreen .hexcode1 {
-  right: 44.3%;
-}
-.twoDslide:fullscreen .hexcode2 {
-  right: 36.6%;
-}
-.twoDslide:fullscreen .hexcode3 {
-  right: 28.9%;
-}
-.twoDslide:fullscreen .MockupLabel {
-  right: 44%; 
-}
 /* Second Slide of 2D Graphic Design */
 .twoDSlide2Text {
   text-align: center;
@@ -1133,7 +989,7 @@ h4 {
   max-width: 13vw; 
   bottom: 5%;
   border: 4px solid var(--heading);
-  border-radius: 1.9vw;
+  border-radius: 1.3vw;
 }
 .DMDSketch {
   left: 4%;
@@ -1161,20 +1017,6 @@ h4 {
 .DMDAnimatedLabel {
   left: 81.5%; 
   top: 42%;
-}
-/* Second Slide of 2D Graphic Design Fullscreen Formatting */
-.twoDslide:fullscreen .DMDSketch, .twoDslide:fullscreen .DMDGreen, .twoDslide:fullscreen .DMDBlue, .twoDslide:fullscreen .DMDOrange, .twoDslide:fullscreen .DMDAnimated {
-  max-width: 17vw;
-  margin-left: -.5%;
-}
-.twoDslide:fullscreen .DMDSketchLabel {
-  left: 7%;
-}
-.twoDslide:fullscreen .DMDVariantsLabel {
-  left: 43.5%;
-}
-.twoDslide:fullscreen .DMDAnimatedLabel {
-  left: 82.5%;
 }
 /* Third Slide of 2D Graphic Design */
 .twoDSlide3Text1 {
@@ -1204,7 +1046,7 @@ h4 {
   position: absolute;
   max-width: 16vw;
   border: 4px solid var(--heading);
-  border-radius: 1.9vw; 
+  border-radius: 1.3vw; 
 }
 .PosterBlack {
   top: 7%;
@@ -1224,28 +1066,89 @@ h4 {
   right: 5%;
   z-index: 1;
 }
-/* Third Slide of 2D Graphic Design Fullscreen Formatting */
-.twoDslide:fullscreen .twoDSlide3Text1 {
+/* First Slide of Fine Arts and Photography */
+.fineArtsslide h2 {
+  line-height: 30px;
+  margin-top: 0%; 
+  padding-top: 0%;
+}
+
+.fineArtsslide h3 {
+  line-height: 28px;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  padding-top: 0%;
+  margin-bottom: 0%;
+  color: white;
+}
+
+.fineArtsslide p {
+  color: var(--heading);
+  font-size: clamp(16px, 2.5vw, 20px);   
+}
+
+.concentration, .Exercises, .Photo {
+  border-radius: 1.2vw; 
+  cursor: pointer;
+}
+
+.concentration .img-fluid, .Exercises .img-fluid, .Photo .img-fluid {
+  border: 3px solid var(--heading);
+}
+
+.concentration, .Photo {
+  width: 100%;
+}
+
+.concentration {
+  max-height: 30vh;     
+}
+
+@media (max-width: 991px) {
+  .concentration {
+    max-height: 15vh;   
+    width: max-content;
+  }
+}
+
+@media (max-width: 740px) {
+  .concentration {
+    max-height: 30vh;
+    width: 100%;
+  }
+}
+
+.fineArtsslide1Text, .fineArtsSlide2Text {
+  text-align: center;
   margin-top: 5%;
-  font-size: clamp(20px, 4vw, 32px); 
 }
-.twoDslide:fullscreen .PosterBlack, .twoDslide:fullscreen .PosterGray, .twoDslide:fullscreen .PosterTopText, .twoDslide:fullscreen .PosterSideText {
-  max-width: 20vw; 
-}
-.twoDslide:fullscreen .PosterLabel {
-  left: 40%;
-}
-/* General Heading and Paragraph Fullscreen formatting */
-.threeDslide:fullscreen h2, .twoDslide:fullscreen h2 {
-  font-size: clamp(30px, 5vw, 45px);
+/* Second Slide of Fine Arts and Photography */
+.Exercises .img-fluid {
+  max-height: 30vh;
+  width: auto;
 }
 
-.threeDslide:fullscreen h3, .twoDslide:fullscreen h3 {
-  font-size: clamp(24px, 4vw, 30px);
+.MixedMediaLabel, .GraphiteLabel {
+  font-size: clamp(16px, 3vw, 24px);
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+  color: var(--heading);
+  padding: 2%;
 }
-
-.threeDslide:fullscreen p, .twoDslide:fullscreen p {
-  font-size: clamp(20px, 4vw, 24px);
+/* Third Slide of Fine Arts and Photograph */
+.fineArtsSlide3Text {
+  text-align: center;
+  margin-top: 15%; 
+}
+/* Reduce border-size when image is small */
+@media (max-width: 992px) {
+  .SnailAngle, .SnailFront, .LightingBed img, .LightingGuitar img, .LightingWindow img, .ThroneFar, .ThroneClose {
+    border: 2px solid var(--afterglow); 
+  }
+  .Photo, .DogLaneBag, .DogLaneMiniBags, .DogLaneCup, .DogLaneDesign, .DogLaneMerch, .DMDSketch, .DMDGreen, .DMDBlue, .DMDOrange, .DMDAnimated, .PosterBlack, .PosterGray, .PosterTopText, .PosterSideText {
+    border: 2px solid var(--heading); 
+  }
 }
 /* Previous and Next buttons for the slideshows */
 .prev, .next {
@@ -1272,15 +1175,6 @@ h4 {
 .prev:hover, .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-
-.fullscreen {
-  position: absolute;
-  top: 102%;
-  left: 50%;  
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
 /* Contact Section */
 .contactContainer {
   background-color: var(--tan-brown);
@@ -1368,7 +1262,6 @@ h4 {
     display: none; 
   }
 }
-
 
 img:fullscreen {
   border: 0px;
