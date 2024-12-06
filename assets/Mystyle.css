@@ -167,8 +167,8 @@ p {
   position: relative; 
   z-index: 1; /* z-index necessary to place it above snail image */
 }
-
-.bio {
+/* Meet Shane section */
+.bio { /* Container for the About Me */
   margin-left: 9.5%;
   margin-right: 10%;
   margin-top: 2%;
@@ -286,7 +286,7 @@ p {
     padding: 2%;
   } 
 }
-
+/* Demo Reel Section */
 .demoreelcontainer { /* Formatting for brown border around video */
   margin-left: 10%;
   margin-right: 10%;
@@ -303,7 +303,7 @@ p {
   width: 100%; /* Ensures video is size of .demoreel */
   border-radius: 1.8vw;
 }
-
+/* Experience Section */
 .experience { /* Settings for green background of each job  */
   background-color: var(--green-grid);
   border-radius: 1.8vw;
@@ -379,7 +379,7 @@ p {
   background-color: var(--pale);
   border: 4px solid var(--green-grid); 
 }
-
+/* Featured Work Section, a short film */
 .featuredcontainer { /* Container for Featured Work Section */
   background-color: var(--muted-green);
   margin-left: 10%; 
@@ -410,29 +410,29 @@ p {
   text-align: center;
 }
 
-.textitem1 { /* Description of Project */
+.ftext1 { /* Description of Project */
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 3%;
   color: black;
 }
 
-.textitem1 p {
+.ftext1 p {
   line-height: 1.15em;
 }
 
-.featuredspacing {
+.featuredspacing { /* Adds spacing to the container */
   margin-right: 12%;
 }
 
 /* Add a border to all featured work images and videos */
-.image1 img, .image2 img, .imageFridge img, .image3 img, .image4 img, .image5 img, .image6 img, .video1 video, .video2 video {
+.fimageDesk img, .fimageSubway img, .fimageFridge img, .fimageFront img, .fimageSide img, .fimageSmallFront img, .fimageSmallSide img, .fvideo1 video, .fvideo2 video {
   border: 5px solid var(--green-dark);
   border-radius: 1.3vw;
   width: 100%;
 }
 
-.image1, .image2, .imageFridge {
+.fimageDesk, .fimageSubway, .fimageFridge {
   max-width: 24vw;  
   margin-top: 5%;
   height: 100%; 
@@ -441,20 +441,20 @@ p {
   object-fit: cover;
 }
 
-.imageFridge, .image2 {
+.fimageFridge, .fimageSubway {
   font-size: clamp(16px, 4vw, 19px); 
 }
 
 @media (min-width: 992px) {
-  .imageFridge b { /* Do not show text below fridge image for xs and sm */
+  .fimageFridge b { /* Do not show text below fridge image for xs and sm */
     display: none;
   }
-  .image2 img {
+  .fimageSubway img {
     margin-bottom: 2%; 
   }  
 }
 
-.image3, .image4, .image5, .image6 { /* Images of Model Sculpts and Creature Design */
+.fimageFront, .fimageSide, .fimageSmallFront, .fimageSmallSide { /* Images of Model Sculpts and Creature Design */
   margin-top: 14%;  
   margin-bottom: 2%;
   margin-left: 16%;
@@ -463,15 +463,15 @@ p {
 } 
 
 @media (min-width: 992px) {
-  .image4 {
+  .fimageSide {
     transform: translateX(-8%);
   }
   
-  .image5 {
+  .fimageSmallFront {
     transform: translateX(-16%);
   }
   
-  .image6{
+  .fimageSmallSide{
     transform: translateX(-23%);  
   }
   .ftext2 {
@@ -489,7 +489,7 @@ p {
   font-size: clamp(16px, 4vw, 19px);  
 }
 
-.video1, .video2 { /* Model Rotation Videos */
+.fvideo1, .fvideo2 { /* Model Rotation Videos */
   margin-top: 8%;
   max-width: 32vw;
   vertical-align: middle;
@@ -497,15 +497,15 @@ p {
   font-size: clamp(16px, 4vw, 19px);
 }
 
-.video1 {
+.fvideo1 {
   transform: translateX(2%);
 }
 
-.video2 {
+.fvideo2 {
   transform: translateX(-1%);
 }
 
-.video1 video, .video2 video {
+.fvideo1 video, .fvideo2 video {
   margin-bottom: 1.5%;
 }
 
@@ -519,7 +519,7 @@ p {
   text-align: center;
 }
 
-.video3 { /* Full Video for the Project */
+.fvideo3 { /* Full Video for the Project */
   max-width: 66.5vw;
   margin-bottom: 2%;
   margin-left: 1%;
@@ -528,42 +528,42 @@ p {
   text-align: center;
 }
 
-.video3 video {
+.fvideo3 video {
   width: 100%;
   border: 10px solid var(--heading);
   border-radius: 1.3vw;
 }
 
 @media (max-width: 991px) { /* Increases size of some images and videos for small screens */
-  .image1, .image2, .imageFridge, .video1, .video2 { 
+  .fimageDesk, .fimageSubway, .fimageFridge, .fvideo1, .fvideo2 { 
     max-width: 80vw; 
     margin-right: 0%;
   }
 
-  .image3, .image5 {
+  .fimageFront, .fimageSmallFront {
     transform: translateX(-10%);
   }
-  .image4, .image6 { /* Images of Model Sculpts and Creature Design */
+  .fimageSide, .fimageSmallSide { /* Images of Model Sculpts and Creature Design */
     transform: translateX(-10%); 
   } 
 
-  .video1 {
+  .fvideo1 {
     transform: translateX(0%);
   }
-  .video2 {
+  .fvideo2 {
     transform: translateX(.1%);
   }
 
-  .video3 {
+  .fvideo3 {
     max-width: 73.3vw;
     margin-left: 0%;
   }
 
-  .video3 video {
+  .fvideo3 video {
     border: 5px solid var(--heading);
   }
 
-  .image2 b { /* Do not show text below subway image for xs and sm */
+  .fimageSubway b { /* Do not show text below subway image for xs and sm */
     display: none;
   }
 
@@ -619,13 +619,18 @@ p {
   background-repeat: no-repeat;  /* Ensures the image doesn't repeat */
   min-height: 100vh;  /* Sets the container's height to fill the viewport */
   border-radius: 1.3vw; 
+  box-sizing: border-box;
 }
 
 .slide3D1 .container-fluid, .slide3D2 .container-fluid, .slide3D3 .container-fluid, .slide3D4 .container-fluid, .slide2D1 .container-fluid, .slide2D2 .container-fluid, .slide2D3 .container-fluid, .slideFineArts1 .container-fluid, .slideFineArts2 .container-fluid, .slideFineArts3 .container-fluid {
-  padding: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   bottom: 0%;
   top: 0%;
   min-height: 100vh;
+  box-sizing: border-box;
 }
 /* First slide of 3D Design and Animation Slideshow */
 .slide3D1 {
@@ -639,8 +644,8 @@ p {
   padding-right: 5%;
 }
 
-.slide3D1Text p, .slide3D2Text p { /* Formatting for the description part of 3D Slide 1 */
-  font-size: 20px;
+.slide3D1Text p, .slide3D2Text p, .slide3D3Text p { /* Formatting for the description part of 3D Slide 1 */
+  font-size: clamp(16px, 2vw, 20px);
   color: var(--heading);
   line-height: 1.15em;
 }
@@ -677,9 +682,6 @@ p {
 .slide3D2 {
   background-image: url('./3DSlides/3DSlide2.png');
 }
-.slide3D2 .container-fluid {
-  padding-top: 2%;
-}
 
 .slide3D2Text {
   text-align: center;
@@ -704,11 +706,6 @@ p {
 }
 .slide3D3Text {
   text-align: center;
-}
-
-.slide3D3Text p {
-  font-size: 16px;
-  color: var(--heading);
 }
 
 .slide3D3Text h2 {
@@ -755,7 +752,7 @@ p {
 }
 
 .slide3D4Text p, .slide3D4Video1 p, .slide3D4Video2 p {
-  font-size: clamp(16px, 1vw, 24px); 
+  font-size: clamp(16px, 2vw, 24px); 
   color: var(--heading);
   line-height: 1em;
 }
@@ -802,10 +799,6 @@ h4 {
 .slide2D1 {
   background-image: url('./2DSlides/2DSlide1.png'); 
 }
-.slide2D1 .container-fluid {
-  padding-top: 2%;
-  padding-bottom: 2%;
-}
 
 .slide2D1Text {
   text-align: center;
@@ -824,7 +817,7 @@ h4 {
 }
 
 .slide2D1Text p, .slide2D2Text p, .slide2D3Text p {
-  font-size: clamp(16px, 1.5vw, 24px); 
+  font-size: clamp(16px, 2vw, 24px); 
   color: var(--heading);
   line-height: 1.15em;
 }
@@ -877,7 +870,7 @@ h4 {
 
 /* Condense 2DSlide1 label formatting into one block of code to reduce code use */
 .LogoDesignLabel, .ColorPaletteLabel, .hexcode1, .hexcode2, .hexcode3, .MockupLabel, .PosterLabel, .DMDSketchLabel, .DMDVariantsLabel, .DMDAnimatedLabel {
-  font-size: clamp(16px, 2.5vw, 24px);
+  font-size: clamp(16px, 2vw, 24px);
   text-align: center;
 }
 
@@ -889,10 +882,10 @@ h4 {
 .slide2D2 {
   background-image: url('./2DSlides/2DSlide2.png'); 
 }
+
 .slide2D2Text {
   text-align: center;
   white-space: pre-line;
-  padding-top: 5%;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -919,9 +912,6 @@ h4 {
 /* Third Slide of 2D Graphic Design */
 .slide2D3 {
   background-image: url('./2DSlides/2DSlide3.png'); 
-}
-.slide2D3 .container-fluid {
-  padding-top: 5%;
 }
 
 .slide2D3Text {
@@ -959,6 +949,7 @@ h4 {
 .slideFineArts1 {
   background-image: url('./FineArtsSlides/FineArtsSlide1.png'); 
 }
+
 .slideFineArts h2 {
   line-height: 30px;
   margin-top: 0%; 
@@ -981,33 +972,23 @@ h4 {
 
 .concentration, .Exercises, .Photo {
   border-radius: 1.2vw; 
-  cursor: pointer;
 }
 
 .concentration .img-fluid, .Exercises .img-fluid, .Photo .img-fluid {
   border: 3px solid var(--heading);
 }
 
-.concentration, .Photo {
-  width: 100%;
-}
-
 .concentration {
-  max-height: 30vh;
-} 
+  width: 90%; 
+}
 
 .concentration img {
   object-fit: cover;
-  height: 100%;
+  height: 90%;
 }
 
 .slideFineArts1Text, .slideFineArts2Text {
   text-align: center;
-  margin-top: 5%;
-}
-
-.slideFineArts1 .container-fluid {
-  padding-top: 2.5%;
 }
 
 .slideFineArts1 h2 {
@@ -1023,8 +1004,9 @@ h4 {
 .slideFineArts2 {
   background-image: url('./FineArtsSlides/FineArtsSlide2.png'); 
 }
+
 .Exercises .img-fluid {
-  width: auto;
+  width: 90%; 
 }
 
 .MixedMediaLabel, .GraphiteLabel {
@@ -1039,21 +1021,14 @@ h4 {
 .slideFineArts3 {
   background-image: url('./FineArtsSlides/FineArtsSlide3.png'); 
 }
+.Photo img {
+  width: auto;
+}
 .slideFineArts3Text {
   text-align: center;
-  margin-top: 15%; 
+  padding-top: 5%;
 }
 
-@media (min-width: 900px) { 
-  .concentration, .Exercises {
-    height: 80%;
-  }
-} 
-@media (min-width: 992px) {
-  .concentration, .Exercises { 
-    height: 100%;
-  }
-}
 /* Reduce border-size when image is small */
 @media (max-width: 992px) {
   .SnailAngle, .SnailFront, .LightingBed img, .LightingGuitar img, .LightingWindow img, .ThroneFar, .ThroneClose {
@@ -1177,7 +1152,15 @@ h4 {
 }
 
 img:fullscreen, .slide3D:fullscreen img, .slide2D:fullscreen img, .slideFineArts:fullscreen img { 
-  border: 0px solid black;
-  border-radius: 0px;
+  border: 0px solid black!important;
+  border-radius: 0px!important;
   object-fit: contain;  
+  top: 0%;
+  left: 0%;
+  position: absolute;
 } 
+
+/* Add Pointer to All images to indicate you can click them */
+img {
+  cursor: pointer;
+}
