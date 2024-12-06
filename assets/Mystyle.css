@@ -575,7 +575,7 @@ p {
 /* Container for each slideshow */
 .slideshow-container {
   position: relative;
-  height: 200%;
+  min-height: 100vh;
   margin-left: 10%;
   margin-right: 10%;
   overflow: hidden;
@@ -617,15 +617,15 @@ p {
   background-size: cover;  /* Makes the image cover the entire container */
   background-position: center;  /* Centers the image in the container */
   background-repeat: no-repeat;  /* Ensures the image doesn't repeat */
-  height: 200vh;  /* Sets the container's height to fill the viewport */
+  min-height: 100vh;  /* Sets the container's height to fill the viewport */
   border-radius: 1.3vw; 
 }
 
 .slide3D1 .container-fluid, .slide3D2 .container-fluid, .slide3D3 .container-fluid, .slide3D4 .container-fluid, .slide2D1 .container-fluid, .slide2D2 .container-fluid, .slide2D3 .container-fluid, .slideFineArts1 .container-fluid, .slideFineArts2 .container-fluid, .slideFineArts3 .container-fluid {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 5%;
   bottom: 0%;
   top: 0%;
+  min-height: 100vh;
 }
 /* First slide of 3D Design and Animation Slideshow */
 .slide3D1 {
@@ -707,7 +707,7 @@ p {
 }
 
 .slide3D3Text p {
-  font-size: clamp(16px, 1vw, 20px);
+  font-size: 16px;
   color: var(--heading);
 }
 
