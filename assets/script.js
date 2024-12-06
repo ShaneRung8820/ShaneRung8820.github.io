@@ -55,3 +55,5 @@ function copyEmail() {
   document.execCommand('copy');
   document.body.removeChild(dummy);
 }
+
+//Click on slideshow to make it full screen
