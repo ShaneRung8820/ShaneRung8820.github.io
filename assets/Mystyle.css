@@ -311,6 +311,14 @@ p {
   line-height: .8em; 
 }
 
+.jobh h1, .jobh h2, .jobh h3 {
+  padding-bottom: 1%;
+}
+
+.jobh h2, .jobh h3 {
+  padding-top: 1%;
+}
+
 .jobd { /* Job description formatting */ 
   margin: 5%; 
   font-size: clamp(16px, 4vw, 24px);
@@ -382,7 +390,7 @@ p {
 .textitem1 { /* Description of Project */
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 5%;
+  margin-top: 3%;
   color: black;
 }
 
