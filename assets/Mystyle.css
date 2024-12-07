@@ -639,15 +639,16 @@ p {
 .slide3D1Text { /* Contains Name of the Project, Year it was Completed, and the description */
   text-align: center;
   margin-bottom: 5%;
-  padding-top: 5%;
   padding-left: 5%;
   padding-right: 5%;
 }
 
 .slide3D1Text p, .slide3D2Text p, .slide3D3Text p { /* Formatting for the description part of 3D Slide 1 */
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: clamp(16px, 2vw, 24px);
   color: var(--heading);
   line-height: 1.15em;
+  padding-left: 5%;
+  padding-right: 5%; 
 }
 
 .InitialLabel, .FinalLabel, .ThroneLabel { /* Formatting shared for all three labels */
@@ -683,12 +684,15 @@ p {
   background-image: url('./3DSlides/3DSlide2.png');
 }
 
-.slide3D2Text {
-  text-align: center;
+.slide3D2 .container-fluid {
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
-.slide3D2Text h3 {
-  margin-bottom: 3%;
+.slide3D2Text {
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .LightingBed img, .LightingGuitar img, .LightingWindow img {
@@ -696,16 +700,13 @@ p {
   border-radius: 1.3vw; 
   object-fit: cover;
 }
+
 /* Third slide of 3D Design and Animation Slideshow */
 .slide3D3 {
   background-image: url('./3DSlides/3DSlide3.png');
 }
 .slide3D3Text {
   text-align: center;
-}
-
-.slide3D3Text h2 {
-  margin-top: 12%;
 }
 
 .slide3D3Text h3 {
@@ -719,26 +720,61 @@ p {
 
 .ThroneFar img, .ThroneClose img, .ThroneSketch img {
   width: 100%;
-  object-fit: cover;
-  object-position: 80% 50%;   
+  height: 100%;
+  object-position: 80% 50%;
+  object-fit: cover!important;    
+}
+@media (max-width: 991px) {
+  .slide3D3Text {
+    margin-bottom: 7.5%;
+  }
+  .ThroneClose {
+    margin-bottom: 4%;
+  }
+}
+@media (min-width: 992px) {
+  .snailLower {
+    padding-top: 12.5%; 
+  }
+  .slide3D1Text {
+    padding-top: 5%;
+  }
+  .slide3D2Text {
+    padding-top: 2.5%;
+  }
+  .slide3D2Text h2 {
+    padding-top: 2%;
+  } 
+  .slide3D3Text {
+    margin-left: 2%; 
+    margin-right: 8%;
+  }
+  .ThroneSketch, .ThroneLabel {
+    margin-right: 1%;
+  }
+  .slide3D3Text h2 {
+    margin-top: 12%;
+  }
 }
 /* Fourth slide of the 3D Design and Animation Slideshow */
 .slide3D4 {
   background-image: url('./3DSlides/3DSlide4.png'); 
 }
 .slide3D4Text h2 { 
-  margin-top: 5%;   
+  margin-top: 2%;   
   margin-bottom: 0%; 
   color: var(--afterglow);
 }
 
 .slide3D4Text h3 {
-  margin-bottom: 2%; 
+  margin-bottom: 5%;  
   color: var(--afterglow);
 }
 
 .slide3D4Video1, .slide3D4Video2 { 
   border-radius: 1.3vw;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .slide3D4Video1 video, .slide3D4Video2 video {
