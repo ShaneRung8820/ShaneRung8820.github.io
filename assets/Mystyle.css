@@ -913,7 +913,7 @@ h4 {
 .slide2D3Text {
   text-align: center;
   white-space: pre-line;
-  font-size: clamp(19px, 3vw, 24px);
+  font-size: clamp(16px, 2vw, 24px);
 }
 .slide2D3Text h2 { 
   padding-bottom: 0%;
@@ -1007,32 +1007,6 @@ h4 {
 }
 /* All changes in the slideshows depending on screen size */
 @media (min-width: 992px) {
-  .snailLower {
-    padding-top: 12.5%; 
-  }
-  .slide3D1Text {
-    padding-top: 5%;
-  }
-  .slide3D2Text {
-    padding-top: 2.5%;
-  }
-  .slide3D2Text h2 {
-    padding-top: 2%;
-  } 
-  .slide3D3Text {
-    margin-left: 2%; 
-    margin-right: 8%;
-  }
-  .ThroneSketch, .ThroneLabel {
-    margin-right: 1%;
-  }
-  .slide3D3Text h2 {
-    margin-top: 12%;
-  }
-  .slide2D2Text {
-    margin-left: 15%;
-    margin-right: 15%;
-  }
   .PosterLabel {
     transform: translateX(-10%);
   }
@@ -1040,24 +1014,6 @@ h4 {
     z-index: 1;
     margin-top: -5%;
   } 
-  .slide2D3Text p {
-    padding-right: 10%; 
-    padding-left: 10%;
-  }
-  .slideFineArts1Text p, .slideFineArts2Text p, .slideFineArts3Text p {
-    padding-right: 10%;
-    padding-left: 10%; 
-  }
-}
-@media (max-height: 850px) {
-  .PosterBlack, .PosterGray, .PosterTopText, .PosterSideText {
-    max-height: 20vh;
-    width: auto;
-  }
-  .PosterBlack img, .PosterGray img, .PosterTopText img, .PosterSideText img {
-    height: 100%;
-    object-fit: cover; 
-  }
 }
 @media (max-width: 991px) {
   .SnailAngle, .SnailFront, .LightingBed img, .LightingGuitar img, .LightingWindow img, .ThroneFar, .ThroneClose {
