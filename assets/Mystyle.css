@@ -405,7 +405,7 @@ p {
 }
 
 .fheading2 { /* Animated Short (2023) */
-  color: var(--green-dark);
+  color: var(--heading);
   font-size: clamp(20px, 5vw, 50px); 
   text-align: center;
 }
@@ -979,12 +979,14 @@ h4 {
 }
 
 .concentration {
-  width: 90%; 
+  max-width: 90%; 
+  max-height: 90%;
 }
 
 .concentration img {
   object-fit: cover;
-  height: 90%;
+  height: 100%;
+  width: 100%;
 }
 
 .slideFineArts1Text, .slideFineArts2Text {
