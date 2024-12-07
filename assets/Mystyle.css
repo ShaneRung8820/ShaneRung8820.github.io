@@ -333,7 +333,7 @@ p {
   margin-top: 0%;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) { /* Increase padding on headings when screen is large, makes it easier to tell sections apart */
   .jobh h1, .jobh h2, .jobh h3 {
     padding-bottom: 1.2%;
   }
@@ -462,7 +462,7 @@ p {
   max-width: 30vw;  
 } 
 
-@media (min-width: 992px) {
+@media (min-width: 992px) { /* Shift elements slightly for larger screens */
   .fimageSide {
     transform: translateX(-8%);
   }
@@ -1144,7 +1144,7 @@ h4 {
     display: none; 
   }
 }
-
+/* Applies when you click on an image to enlarge it */
 img:fullscreen, .slide3D:fullscreen img, .slide2D:fullscreen img, .slideFineArts:fullscreen img { 
   border: 0px solid black!important;
   border-radius: 0px!important;
