@@ -27,7 +27,7 @@
   max-width: 90px; 
 }
 
-.collapse {
+.collapse { /* Dropdown Items */
   margin-right: 10%;
 }
 
@@ -64,7 +64,7 @@
   background-color: var(--pale); 
 }
 
-.navbar-toggler { 
+.navbar-toggler { /* Dropdown Menu Button */
   margin-right: 10%;
   border: 0px;
 }
@@ -691,8 +691,6 @@ p {
 
 .slide3D2Text {
   text-align: center;
-  margin-left: 5%;
-  margin-right: 5%;
 }
 
 .LightingBed img, .LightingGuitar img, .LightingWindow img {
@@ -747,12 +745,21 @@ p {
   width: 100%;
   border: 2px solid var(--afterglow);
   border-radius: 1.3vw;
+  margin-bottom: 2%;
 }
 
-.slide3D4Text p, .slide3D4Video1 p, .slide3D4Video2 p {
+.slide3D4Video1 p, .slide3D4Video2 p {
+  font-size: clamp(16px, 2vw, 20px); 
+  color: var(--heading);
+  line-height: 1em;
+}
+
+.slide3D4Text p {
   font-size: clamp(16px, 2vw, 24px); 
   color: var(--heading);
   line-height: 1em;
+  margin-left: 5%;
+  margin-right: 5%; 
 }
 
 h4 {
