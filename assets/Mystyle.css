@@ -735,15 +735,12 @@ p {
   color: var(--afterglow);
 }
 
-.slide3D4Text h3 {
-  margin-bottom: 5%;  
+.slide3D4Text h3 { 
   color: var(--afterglow);
 }
 
 .slide3D4Video1, .slide3D4Video2 { 
   border-radius: 1.3vw;
-  margin-top: 5%;
-  margin-bottom: 5%;
 }
 
 .slide3D4Video1 video, .slide3D4Video2 video {
@@ -758,15 +755,10 @@ p {
   line-height: 1em;
 }
 
-.slide3D4Video1 p, .slide3D4Video2 p {
-  margin-top: 4%;
-}
-
 h4 {
   font-size: clamp(24px, 3vw, 30px);
   font-weight: normal;
   line-height: 1em;
-  margin: 0px 0px 10px 0px;
   color: var(--afterglow);
 }
 
